@@ -1,5 +1,5 @@
 # Over-The-Wire
-<b>Natas</b?
+<b>Natas</b>
 
 Natas teaches the basics of serverside web-security.
 
