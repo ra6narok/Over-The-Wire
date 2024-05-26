@@ -1,0 +1,11 @@
+PASSWORD: jmxSiH3SP6Sonf8dv66ng8v1cIEdjXWr
+
+*LEFT CLICK* on "Home" or "About"
+
+URL: http://natas7.natas.labs.overthewire.org/index.php?page=home
+
+*Either way it is a PHP* - PHP is a popular scripting language for web development
+
+URL: http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8
+
+a6bZCNYwdKqN5cGP11ZdtPg0iImQQhAB  <-----PASSWORD
