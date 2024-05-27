@@ -1,0 +1,176 @@
+PASSWORD: 1KFqoJXi6hRaPluAmk8ESDW4fSysRoIg
+
+*LEFT CLICK* View sourcecode
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas11", "pass": "<censored>" };</script></head>
+<?
+
+$defaultdata = array( "showpassword"=>"no", "bgcolor"=>"#ffffff");  <-----ARRAY = PLAINTEXT*
+
+function xor_encrypt($in) {
+    $key = '<censored>';
+    $text = $in;
+    $outText = '';
+
+    // Iterate through each character
+    for($i=0;$i<strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+
+function loadData($def) {
+    global $_COOKIE;
+    $mydata = $def;
+    if(array_key_exists("data", $_COOKIE)) {  <-----COOKIE = CIPHER*
+    $tempdata = json_decode(xor_encrypt(base64_decode($_COOKIE["data"])), true);
+    if(is_array($tempdata) && array_key_exists("showpassword", $tempdata) && array_key_exists("bgcolor", $tempdata)) {
+        if (preg_match('/^#(?:[a-f\d]{6})$/i', $tempdata['bgcolor'])) {
+        $mydata['showpassword'] = $tempdata['showpassword'];
+        $mydata['bgcolor'] = $tempdata['bgcolor'];
+        }
+    }
+    }
+    return $mydata;
+}
+
+function saveData($d) {
+    setcookie("data", base64_encode(xor_encrypt(json_encode($d))));
+}
+
+$data = loadData($defaultdata);
+
+if(array_key_exists("bgcolor",$_REQUEST)) {
+    if (preg_match('/^#(?:[a-f\d]{6})$/i', $_REQUEST['bgcolor'])) {
+        $data['bgcolor'] = $_REQUEST['bgcolor'];
+    }
+}
+
+saveData($data);
+
+
+
+?>
+
+<h1>natas11</h1>
+<div id="content">
+<body style="background: <?=$data['bgcolor']?>;">
+Cookies are protected with XOR encryption<br/><br/>
+
+<?
+if($data["showpassword"] == "yes") {
+    print "The password for natas12 is <censored><br>";
+}
+
+?>
+
+<form>
+Background color: <input name=bgcolor value="<?=$data['bgcolor']?>">
+<input type=submit value="Set color">
+</form>
+
+<div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+
+*BURP SUITE*
+*TOGGLE* Intercept is on
+*CONFIRM THAT WEB BROWSER is SET to BURP PROXY*
+
+URL: http://natas11.natas.labs.overthewire.org/ 
+*REFRESH 
+
+*BURP SUITE*
+HTTP History
+GET / HTTP/1.1
+
+Host: natas11.natas.labs.overthewire.org
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+Accept-Language: en-US,en;q=0.5
+
+Accept-Encoding: gzip, deflate, br
+
+Authorization: Basic bmF0YXMxMToxS0Zxb0pYaTZoUmFQbHVBbWs4RVNEVzRmU3lzUm9JZw==
+
+Connection: close
+
+Cookie: data=MGw7JCQ5OC04PT8jOSpqdmkgJ25nbCorKCEkIzlscm5oKC4qLSgubjY%3D  <-----CURRENT COOCKIE*(%3D is URL ENCODED and = is BASE64 ENCODED)*
+
+Upgrade-Insecure-Requests: 1
+
+*TERMINAL*
+php -a
+php> $cookie = 'MGw7JCQ5OC04PT8jOSpqdmkgJ25nbCorKCEkIzlscm5oKC4qLSgubjY=';  <-----MAKE SURE THAT COOCKIE IS BASE65 ENCODED*
+function xor_encrypt($in) {
+    $key = json_encode(array( "showpassword"=>"no", "bgcolor"=>"#ffffff"));
+    $text = $in;
+    $outText = '';
+    // Iterate through each character
+    for($i=0;$i<strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+
+echo xor_encrypt(base64_decode($cookie));
+
+KNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLKNHLK  <-----KNHL = KEY*
+
+php> function xor_encrypt($in) {
+    $key = 'KNHL';
+    $text = $in;
+    $outText = '';
+    // Iterate through each character
+    for($i=0;$i<strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+
+echo base64_encode(xor_encrypt(json_encode(array( "showpassword"=>"yes", "bgcolor"=>"#ffffff"))));
+
+MGw7JCQ5OC04PT8jOSpqdmk3LT9pYmouLC0nICQ8anZpbS4qLSguKmkz  <-----NEW COOKIE*
+
+*BURP SUITE*
+GET / HTTP/1.1
+
+Host: natas11.natas.labs.overthewire.org
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+Accept-Language: en-US,en;q=0.5
+
+Accept-Encoding: gzip, deflate, br
+
+Authorization: Basic bmF0YXMxMToxS0Zxb0pYaTZoUmFQbHVBbWs4RVNEVzRmU3lzUm9JZw==
+
+Connection: close
+
+Cookie: data=MGw7JCQ5OC04PT8jOSpqdmk3LT9pYmouLC0nICQ8anZpbS4qLSguKmkz  <-----INSERT NEW COOKIE*
+
+Upgrade-Insecure-Requests: 1
+
+*TOGGLE FORWARD*
+
+*WEB BROWSER*
+Cookies are protected with XOR encryption
+
+The password for natas12 is YWqo0pjpcXzSIl5NMAVxg12QxeC1w9QG
